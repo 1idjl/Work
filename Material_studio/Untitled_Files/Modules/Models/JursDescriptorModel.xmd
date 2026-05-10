@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="descriptor" GUID="{F7B7185B-DEC1-4e01-A6CB-5BD9EC68B436}">
+		<Name>Jurs Descriptors</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2004-11-05T17:19:52</DateCreated>
+		<DateModified>2004-11-05T17:19:52</DateModified>
+		<Note>Jurs Descriptor Models</Note>
+	</BasicInformation>
+	<Inputs number="6">
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+			<GUID></GUID>
+		</Input>
+		<Input name="Charge assignment" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>AssignCharges</KeyName>
+			</Key>
+			<Value>Use current</Value>
+			<Range type="enumeration" number="3">
+				<Item name="Use QEq" value="1"/>
+				<Item name="Use Gasteiger" value="2"/>
+				<Item name="Use current" value="3"/>
+			</Range>
+		</Input>
+		<Input name="Jurs radius" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>JursRadius</KeyName>
+			</Key>
+			<Value>1.4</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.0"/>
+				<Item name="Max" value="10.0"/>
+			</Range>
+		</Input>
+		<Input name="Charge threshold" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ChargeThreshold</KeyName>
+			</Key>
+			<Value>0.2</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.0"/>
+				<Item name="Max" value="10.0"/>
+			</Range>
+		</Input>
+		<Input name="Use polar atoms" type="boolean" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>UsePolarAtoms</KeyName>
+			</Key>
+			<Value>0</Value>
+		</Input>
+		<Input name="Polar atoms" type="string" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>PolarAtoms</KeyName>
+			</Key>
+			<Value>N,O,S</Value>
+		</Input>
+	</Inputs>
+	<Outputs number="30">
+		<Output name="SASA" type="double">
+			<Key>
+				<KeyName>Jurs-SASA</KeyName>
+			</Key>
+		</Output>
+		<Output name="PPSA1" type="double">
+			<Key>
+				<KeyName>Jurs-PPSA-1</KeyName>
+			</Key>
+		</Output>
+		<Output name="PPSA2" type="double">
+			<Key>
+				<KeyName>Jurs-PPSA-2</KeyName>
+			</Key>
+		</Output>
+		<Output name="PPSA3" type="double">
+			<Key>
+				<KeyName>Jurs-PPSA-3</KeyName>
+			</Key>
+		</Output>
+		<Output name="PNSA1" type="double">
+			<Key>
+				<KeyName>Jurs-PNSA-1</KeyName>
+			</Key>
+		</Output>
+		<Output name="PNSA2" type="double">
+			<Key>
+				<KeyName>Jurs-PNSA-2</KeyName>
+			</Key>
+		</Output>
+		<Output name="PNSA3" type="double">
+			<Key>
+				<KeyName>Jurs-PNSA-3</KeyName>
+			</Key>
+		</Output>
+		<Output name="DPSA1" type="double">
+			<Key>
+				<KeyName>Jurs-DPSA-1</KeyName>
+			</Key>
+		</Output>
+		<Output name="DPSA2" type="double">
+			<Key>
+				<KeyName>Jurs-DPSA-2</KeyName>
+			</Key>
+		</Output>
+		<Output name="DPSA3" type="double">
+			<Key>
+				<KeyName>Jurs-DPSA-3</KeyName>
+			</Key>
+		</Output>
+		<Output name="FPSA1" type="double">
+			<Key>
+				<KeyName>Jurs-FPSA-1</KeyName>
+			</Key>
+		</Output>
+		<Output name="FPSA2" type="double">
+			<Key>
+				<KeyName>Jurs-FPSA-2</KeyName>
+			</Key>
+		</Output>
+		<Output name="FPSA3" type="double">
+			<Key>
+				<KeyName>Jurs-FPSA-3</KeyName>
+			</Key>
+		</Output>
+		<Output name="FNSA1" type="double">
+			<Key>
+				<KeyName>Jurs-FNSA-1</KeyName>
+			</Key>
+		</Output>
+		<Output name="FNSA2" type="double">
+			<Key>
+				<KeyName>Jurs-FNSA-2</KeyName>
+			</Key>
+		</Output>
+		<Output name="FNSA3" type="double">
+			<Key>
+				<KeyName>Jurs-FNSA-3</KeyName>
+			</Key>
+		</Output>
+		<Output name="WPSA1" type="double">
+			<Key>
+				<KeyName>Jurs-WPSA-1</KeyName>
+			</Key>
+		</Output>
+		<Output name="WPSA2" type="double">
+			<Key>
+				<KeyName>Jurs-WPSA-2</KeyName>
+			</Key>
+		</Output>
+		<Output name="WPSA3" type="double">
+			<Key>
+				<KeyName>Jurs-WPSA-3</KeyName>
+			</Key>
+		</Output>
+		<Output name="WNSA1" type="double">
+			<Key>
+				<KeyName>Jurs-WNSA-1</KeyName>
+			</Key>
+		</Output>
+		<Output name="WNSA2" type="double">
+			<Key>
+				<KeyName>Jurs-WNSA-2</KeyName>
+			</Key>
+		</Output>
+		<Output name="WNSA3" type="double">
+			<Key>
+				<KeyName>Jurs-WNSA-3</KeyName>
+			</Key>
+		</Output>
+		<Output name="RPCG" type="double">
+			<Key>
+				<KeyName>Jurs-RPCG</KeyName>
+			</Key>
+		</Output>
+		<Output name="RNCG" type="double">
+			<Key>
+				<KeyName>Jurs-RNCG</KeyName>
+			</Key>
+		</Output>
+		<Output name="RPCS" type="double">
+			<Key>
+				<KeyName>Jurs-RPCS</KeyName>
+			</Key>
+		</Output>
+		<Output name="RNCS" type="double">
+			<Key>
+				<KeyName>Jurs-RNCS</KeyName>
+			</Key>
+		</Output>
+		<Output name="TPSA" type="double">
+			<Key>
+				<KeyName>Jurs-TPSA</KeyName>
+			</Key>
+		</Output>
+		<Output name="TASA" type="double">
+			<Key>
+				<KeyName>Jurs-TASA</KeyName>
+			</Key>
+		</Output>
+		<Output name="RPSA" type="double">
+			<Key>
+				<KeyName>Jurs-RPSA</KeyName>
+			</Key>
+		</Output>
+		<Output name="RASA" type="double">
+			<Key>
+				<KeyName>Jurs-RASA</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="8">
+			<OutputGroup name="Solvent accessible area" category="Spatial">
+				<OutputKey>Jurs-SASA</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Partial charged areas" category="Spatial">
+				<OutputKey>Jurs-PPSA-1</OutputKey>
+				<OutputKey>Jurs-PNSA-1</OutputKey>
+				<OutputKey>Jurs-DPSA-1</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Total charge weighted areas" category="Spatial">
+				<OutputKey>Jurs-PPSA-2</OutputKey>
+				<OutputKey>Jurs-PNSA-2</OutputKey>
+				<OutputKey>Jurs-DPSA-2</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Atomic charge weighted areas" category="Spatial">
+				<OutputKey>Jurs-PPSA-3</OutputKey>
+				<OutputKey>Jurs-PNSA-3</OutputKey>
+				<OutputKey>Jurs-DPSA-3</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Fractional charged partial areas" category="Spatial">
+				<OutputKey>Jurs-FPSA-1</OutputKey>
+				<OutputKey>Jurs-FPSA-2</OutputKey>
+				<OutputKey>Jurs-FPSA-3</OutputKey>
+				<OutputKey>Jurs-FNSA-1</OutputKey>
+				<OutputKey>Jurs-FNSA-2</OutputKey>
+				<OutputKey>Jurs-FNSA-3</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Surface weighted partial areas" category="Spatial">
+				<OutputKey>Jurs-WPSA-1</OutputKey>
+				<OutputKey>Jurs-WPSA-2</OutputKey>
+				<OutputKey>Jurs-WPSA-3</OutputKey>
+				<OutputKey>Jurs-WNSA-1</OutputKey>
+				<OutputKey>Jurs-WNSA-2</OutputKey>
+				<OutputKey>Jurs-WNSA-3</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Relative charges" category="Spatial">
+				<OutputKey>Jurs-RPCG</OutputKey>
+				<OutputKey>Jurs-RNCG</OutputKey>
+				<OutputKey>Jurs-RPCS</OutputKey>
+				<OutputKey>Jurs-RNCS</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Polar and apolar areas" category="Spatial">
+				<OutputKey>Jurs-TPSA</OutputKey>
+				<OutputKey>Jurs-TASA</OutputKey>
+				<OutputKey>Jurs-RPSA</OutputKey>
+				<OutputKey>Jurs-RASA</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineFastDescriptor" engineName="Fast Descriptors"/>
+	</Relationship>
+</PredictiveModel>

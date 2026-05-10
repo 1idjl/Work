@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="descriptor" GUID="{D839A845-EC1F-4c3d-B2B8-FB852F451638}">
+		<Name>Atom Volumes and Surfaces</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2005-06-01T16:42:37</DateCreated>
+		<DateModified>2005-06-01T16:42:37</DateModified>
+		<Note>Atom Volumes and Surfaces</Note>
+	</BasicInformation>
+	<Inputs number="5">
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+			<GUID></GUID>
+		</Input>
+		<Input name="Resolution" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Resolution</KeyName>
+			</Key>
+			<Value>Medium</Value>
+			<Range type="enumeration" number="4">
+				<Item name="Coarse" value="1"/>
+				<Item name="Medium" value="2"/>
+				<Item name="Fine" value="3"/>
+				<Item name="Ultra-fine" value="4"/>
+			</Range>
+		</Input>
+		<Input name="vdW scale factor" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>vdWScale</KeyName>
+			</Key>
+			<Value>1.0</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.1"/>
+				<Item name="Max" value="3.0"/>
+			</Range>
+		</Input>
+		<Input name="Solvent radius" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>SolventRadius</KeyName>
+			</Key>
+			<Value>1.4</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.5"/>
+				<Item name="Max" value="10.0"/>
+			</Range>
+		</Input>
+		<Input name="Connolly radius" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ConnollyRadius</KeyName>
+			</Key>
+			<Value>1.0</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.1"/>
+				<Item name="Max" value="10.0"/>
+			</Range>
+		</Input>
+	</Inputs>
+	<Outputs number="12">
+		<Output name="vdW surface area" type="double">
+			<Key>
+				<KeyName>vdWArea</KeyName>
+			</Key>
+		</Output>
+		<Output name="vdW surface occupied volume" type="double">
+			<Key>
+				<KeyName>vdWOccupiedVolume</KeyName>
+			</Key>
+		</Output>
+		<Output name="vdW surface free volume" type="double">
+			<Key>
+				<KeyName>vdWFreeVolume</KeyName>
+			</Key>
+		</Output>
+		<Output name="Solvent surface area" type="double">
+			<Key>
+				<KeyName>SolventArea</KeyName>
+			</Key>
+		</Output>
+		<Output name="Solvent surface occupied volume" type="double">
+			<Key>
+				<KeyName>SolventOccupiedVolume</KeyName>
+			</Key>
+		</Output>
+		<Output name="Solvent surface free volume" type="double">
+			<Key>
+				<KeyName>SolventFreeVolume</KeyName>
+			</Key>
+		</Output>
+		<Output name="Solvent-accessible surface area" type="double">
+			<Key>
+				<KeyName>AccessibleArea</KeyName>
+			</Key>
+		</Output>
+		<Output name="Solvent-accessible occupied volume" type="double">
+			<Key>
+				<KeyName>AccessibleOccupiedVolume</KeyName>
+			</Key>
+		</Output>
+		<Output name="Solvent-accessible free volume" type="double">
+			<Key>
+				<KeyName>AccessibleFreeVolume</KeyName>
+			</Key>
+		</Output>
+		<Output name="Connolly surface area" type="double">
+			<Key>
+				<KeyName>ConnollyArea</KeyName>
+			</Key>
+		</Output>
+		<Output name="Connolly surface occupied volume" type="double">
+			<Key>
+				<KeyName>ConnollyOccupiedVolume</KeyName>
+			</Key>
+		</Output>
+		<Output name="Connolly surface free volume" type="double">
+			<Key>
+				<KeyName>ConnollyFreeVolume</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="4">
+			<OutputGroup name="Connolly Surface" category="Spatial">
+				<OutputKey>ConnollyArea</OutputKey>
+				<OutputKey>ConnollyOccupiedVolume</OutputKey>
+				<OutputKey defaultCalc="0">ConnollyFreeVolume</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Surface Area" category="Spatial">
+				<OutputKey defaultCalc="0">vdWArea</OutputKey>
+				<OutputKey>SolventArea</OutputKey>
+				<OutputKey defaultCalc="0">AccessibleArea</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Occupied Volume" category="Spatial">
+				<OutputKey defaultCalc="0">vdWOccupiedVolume</OutputKey>
+				<OutputKey>SolventOccupiedVolume</OutputKey>
+				<OutputKey defaultCalc="0">AccessibleOccupiedVolume</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Free Volume" category="Spatial">
+				<OutputKey defaultCalc="0">vdWFreeVolume</OutputKey>
+				<OutputKey>SolventFreeVolume</OutputKey>
+				<OutputKey defaultCalc="0">AccessibleFreeVolume</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineAtomVolumes" engineName="Atom Volumes and Surfaces"/>
+	</Relationship>
+</PredictiveModel>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="latin1"?>
+<EXTENSION VERSION="24.1">
+<LOGICS>
+<LOGICITEM NAME="Anneal">
+	<STATE NAME="Dynamics" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="BondIncrement">
+	<STATE NAME="BondIncrement" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="BondOrder">
+	<STATE NAME="UFFBondOrder" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ChargeEditor">
+	<STATE NAME="SMXCharge.ChargeEditor" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ChargeGasteiger">
+	<STATE NAME="SMXCharge.ChargeGasteiger" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ChargeGroups">
+	<STATE NAME="Charge Groups" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ChargeQEq">
+	<STATE NAME="SMXCharge.ChargeQEq" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ClassicalEnergy">
+	<STATE NAME="ClassicalEnergy - Classical Energy Server" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="Hints">
+	<VALUE>
+	<ITEM>0002</ITEM>
+	<ITEM>1001</ITEM>
+	</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="CohesiveEnergyDensity">
+	<STATE NAME="CohesiveEnergyDensity" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ConfinedShear">
+	<STATE NAME="Dynamics" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="Dynamics">
+	<STATE NAME="Dynamics" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ForcefieldChooser">
+	<STATE NAME="ForciteForcefieldChooser" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="RecentlyUsedForcefields">
+	<VALUE></VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ForcefieldPreparation">
+	<STATE NAME="Forcefield preparation" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="ChargeAssignment">
+	<VALUE>1</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ForciteJobHandler">
+</LOGICITEM>
+<LOGICITEM NAME="ForciteJobLauncher">
+	<STATE NAME="ForciteJobLauncherState" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="TaskTypeDescription">
+	<VALUE>GeomOpt</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ForciteLogic">
+	<STATE NAME="Forcite" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="Task">
+	<VALUE>2</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ForciteTrjHelper">
+	<STATE NAME="ForciteTrjHelper" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="FreeEnergyLogic">
+	<STATE NAME="FreeEnergy" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="MechanicalProperties">
+	<STATE NAME="MechanicalProperties" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="Minimizer">
+	<STATE NAME="Minimize" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="MaxIterations">
+	<VALUE>5000</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="SmartOptimizationAlgorithm">
+	<VALUE>
+	<ITEM>2</ITEM>
+	<ITEM>5</ITEM>
+	<ITEM>4</ITEM>
+	</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="SmartAtomLimit">
+	<VALUE>
+	<ITEM>0</ITEM>
+	<ITEM>0</ITEM>
+	<ITEM>0</ITEM>
+	</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="SmartAssymetericAtomLimit">
+	<VALUE>
+	<ITEM>0</ITEM>
+	<ITEM>0</ITEM>
+	<ITEM>200</ITEM>
+	</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="SmartExitCriteria">
+	<VALUE>
+	<ITEM>1000.</ITEM>
+	<ITEM>50.</ITEM>
+	<ITEM>0.1</ITEM>
+	</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="OFFAtomTyping">
+	<STATE NAME="OFFAtomTyping" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="PotentialAtomTyping">
+	<STATE NAME="PotentialAtomTyping" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="Quench">
+	<STATE NAME="Dynamics" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="QuenchTrjHelper">
+	<STATE NAME="ForciteTrjHelper" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ScriptedAnneal">
+</LOGICITEM>
+<LOGICITEM NAME="ScriptedConfinedShear">
+</LOGICITEM>
+<LOGICITEM NAME="ScriptedDynamics">
+</LOGICITEM>
+<LOGICITEM NAME="ScriptedGeometryOptimization">
+</LOGICITEM>
+<LOGICITEM NAME="ScriptedQuench">
+</LOGICITEM>
+<LOGICITEM NAME="ScriptedShear">
+</LOGICITEM>
+<LOGICITEM NAME="Shear">
+	<STATE NAME="Dynamics" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="TrajectoryAnalysis">
+	<STATE NAME="TrajAnalysis" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="ViewInStudyTableProperties">
+	<VALUE>
+	<ITEM>Time</ITEM>
+	<ITEM>Frame step</ITEM>
+	<ITEM>Frame number</ITEM>
+	<ITEM>Hamiltonian</ITEM>
+	<ITEM>Total kinetic energy</ITEM>
+	<ITEM>Potential energy components</ITEM>
+	<ITEM>Pressure</ITEM>
+	<ITEM>Temperature</ITEM>
+	<ITEM>Density</ITEM>
+	<ITEM>Cell volume</ITEM>
+	<ITEM>Cell parameters</ITEM>
+	</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+</LOGICS>
+</EXTENSION>

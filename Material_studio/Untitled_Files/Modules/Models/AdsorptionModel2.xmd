@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+    <BasicInformation type="simulation" GUID="{E0A8B4D8-7E11-407B-922C-6E3D4D462E7C}">
+        <Name>Adsorption</Name>
+        <Author>BIOVIA</Author>
+        <DateCreated>2020-07-15T12:14:00</DateCreated>
+        <DateModified>2020-07-15T12:14:00</DateModified>
+        <Note>A model to predict adsorption energies</Note>
+    </BasicInformation>
+    <Inputs number="9">
+        <Input name="Target" type="structure" role="Parameter" permittedRoles="Parameter">
+            <Key>
+                <KeyName>TargetStructure</KeyName>
+            </Key>
+        </Input>
+        <Input name="Target role" type="enumeration" role="Parameter" permittedRoles="Parameter">
+            <Key>
+                <KeyName>TargetRole</KeyName>
+            </Key>
+            <Value>Substrate</Value>
+            <Range type="enumeration" number="2">
+                <Item name="Adsorbate" value="1"/>
+                <Item name="Substrate" value="2"/>
+            </Range>
+        </Input>
+        <Input name="Location" type="enumeration" role="Parameter" permittedRoles="Parameter">
+            <Key>
+                <KeyName>Location</KeyName>
+            </Key>
+            <Value>Bounding box</Value>
+            <Range type="enumeration" number="3">
+                <Item name="Bounding box" value="1"/>
+                <Item name="Region by atom set" value="2"/>
+                <Item name="Region by field" value="3"/>
+            </Range>
+        </Input>
+        <Input name="Quality" type="enumeration" role="Parameter" permittedRoles="Parameter">
+            <Key>
+                <KeyName>CalculationQuality</KeyName>
+            </Key>
+            <Value>Medium</Value>
+            <Range type="enumeration" number="4">
+                <Item name="Coarse" value="1"/>
+                <Item name="Medium" value="2"/>
+                <Item name="Fine" value="3"/>
+                <Item name="Ultra-fine" value="4"/>
+            </Range>
+        </Input>
+        <Input name="Adsorbate loading" type="long" role="Parameter" permittedRoles="Parameter">
+            <Key>
+                <KeyName>AdsorbateLoading</KeyName>
+            </Key>
+            <Value>1</Value>
+            <Range type="enumeration" number="2">
+                <Item name="Min" value="1"/>
+                <Item name="Max" value="10"/>
+            </Range>
+        </Input>
+        <Input name="Forcefield" type="enumeration" role="Parameter" permittedRoles="Parameter">
+            <Key>
+                <KeyName>Forcefield</KeyName>
+            </Key>
+            <Value>COMPASSIII</Value>
+            <Range type="enumeration" number="5">
+                <Item name="Universal" value="1"/>
+                <Item name="Dreiding" value="2"/>
+                <Item name="COMPASSIII" value="3"/>
+                <Item name="cvff" value="4"/>
+                <Item name="pcff" value="5"/>
+            </Range>
+        </Input>
+        <Input name="Charge assignment" type="enumeration" role="Parameter" permittedRoles="Parameter">
+            <Key>
+                <KeyName>AssignCharges</KeyName>
+            </Key>
+            <Value>Automatic</Value>
+            <Range type="enumeration" number="4">
+                <Item name="Charge using QEq" value="1"/>
+                <Item name="Charge using Gasteiger" value="2"/>
+                <Item name="Use current" value="3"/>
+                <Item name="Automatic" value="4"/>
+            </Range>
+        </Input>
+        <Input name="Forcefield typing" type="boolean" role="Parameter" permittedRoles="Parameter">
+            <Key>
+                <KeyName>AssignForcefieldTypes</KeyName>
+            </Key>
+            <Value>-1</Value>
+        </Input>
+        <Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+            <Key>
+                <KeyName>Structure</KeyName>
+            </Key>
+        </Input>
+    </Inputs>
+    <Outputs number="3">
+        <Output name="Adsorption energy" type="energy">
+            <Key>
+                <KeyName>AdsorptionEnergy</KeyName>
+            </Key>
+        </Output>
+        <Output name="Adsorption geometry" type="structure">
+            <Key>
+                <KeyName>AdsorptionGeometry</KeyName>
+            </Key>
+        </Output>
+        <Output name="Energy distribution" type="chart2d">
+            <Key>
+                <KeyName>EnergyDistribution</KeyName>
+            </Key>
+        </Output>
+        <OutputGroups number="1">
+            <OutputGroup name="Adsorption" category="Docking">
+                <OutputKey>AdsorptionEnergy</OutputKey>
+                <OutputKey>AdsorptionGeometry</OutputKey>
+                <OutputKey>EnergyDistribution</OutputKey>
+            </OutputGroup>
+        </OutputGroups>
+    </Outputs>
+    <Relationship>
+        <SimpleEngine engineProgID="SBPhysicalModelEngines.ModelAdsorption" engineName="Adsorption"/>
+    </Relationship>
+</PredictiveModel>

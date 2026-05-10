@@ -1,0 +1,6 @@
+ Job Name                         :  a_Si3N4_structure
+ type of calculation              :  geometry optimization
+ plane wave basis set cut-off     :  550.0000   eV
+ using functional                 :  Perdew Burke Ernzerhof
+
+ Number of iterations             :  0

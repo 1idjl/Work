@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="descriptor" GUID="{CD927B59-8792-46EB-BE62-E66C97792CCE}">
+		<Name>Spatial Descriptors</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2003-09-25T17:06:27</DateCreated>
+		<DateModified>2003-09-25T17:06:27</DateModified>
+		<Note>A model to calculate spatial descriptors</Note>
+	</BasicInformation>
+	<Inputs number="1">
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+		</Input>
+	</Inputs>
+	<Outputs number="37">
+		<Output name="Molecular area (vdW area)" type="double">
+			<Key>
+				<KeyName>Area</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular volume (vdW volume)" type="double">
+			<Key>
+				<KeyName>Volume</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular density" type="double">
+			<Key>
+				<KeyName>Density</KeyName>
+			</Key>
+		</Output>
+		<Output name="Radius of gyration" type="double">
+			<Key>
+				<KeyName>RGyr</KeyName>
+			</Key>
+		</Output>
+		<Output name="Principal moment of inertia X" type="double">
+			<Key>
+				<KeyName>PMIXX40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Principal moment of inertia Y" type="double">
+			<Key>
+				<KeyName>PMIYY40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Principal moment of inertia Z" type="double">
+			<Key>
+				<KeyName>PMIZZ40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Principal moments of inertia (magnitude)" type="double">
+			<Key>
+				<KeyName>PMITOT40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Moment of inertia X" type="double">
+			<Key>
+				<KeyName>PMIXX</KeyName>
+			</Key>
+		</Output>
+		<Output name="Moment of inertia Y" type="double">
+			<Key>
+				<KeyName>PMIYY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Moment of inertia Z" type="double">
+			<Key>
+				<KeyName>PMIZZ</KeyName>
+			</Key>
+		</Output>
+		<Output name="Moment of inertia (magnitude)" type="double">
+			<Key>
+				<KeyName>PMITOT</KeyName>
+			</Key>
+		</Output>
+		<Output name="Ellipsoidal volume" type="double">
+			<Key>
+				<KeyName>EllipsoidalVolume</KeyName>
+			</Key>
+		</Output>
+		<Output name="Dipole moment X" type="double">
+			<Key>
+				<KeyName>DIPMOMX</KeyName>
+			</Key>
+		</Output>
+		<Output name="Dipole moment Y" type="double">
+			<Key>
+				<KeyName>DIPMOMY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Dipole moment Z" type="double">
+			<Key>
+				<KeyName>DIPMOMZ</KeyName>
+			</Key>
+		</Output>
+		<Output name="Dipole moment (magnitude)" type="double">
+			<Key>
+				<KeyName>DIPMOMTOT</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow area: XY plane" type="double">
+			<Key>
+				<KeyName>SXY40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow area: YZ plane" type="double">
+			<Key>
+				<KeyName>SYZ40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow area: ZX plane" type="double">
+			<Key>
+				<KeyName>SZX40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow area fraction: XY plane" type="double">
+			<Key>
+				<KeyName>SXYF40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow area fraction: YZ plane" type="double">
+			<Key>
+				<KeyName>SYZF40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow area fraction: ZX plane" type="double">
+			<Key>
+				<KeyName>SZXF40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow length: LX" type="double">
+			<Key>
+				<KeyName>SLX40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow length: LY" type="double">
+			<Key>
+				<KeyName>SLY40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow length: LZ" type="double">
+			<Key>
+				<KeyName>SLZ40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Shadow ratio" type="double">
+			<Key>
+				<KeyName>SRatio40</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow area: XY plane" type="double">
+			<Key>
+				<KeyName>SXY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow area: YZ plane" type="double">
+			<Key>
+				<KeyName>SYZ</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow area: ZX plane" type="double">
+			<Key>
+				<KeyName>SZX</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow area fraction: XY plane" type="double">
+			<Key>
+				<KeyName>SXYF</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow area fraction: YZ plane" type="double">
+			<Key>
+				<KeyName>SYZF</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow area fraction: ZX plane" type="double">
+			<Key>
+				<KeyName>SZXF</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow length: LX" type="double">
+			<Key>
+				<KeyName>SLX</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow length: LY" type="double">
+			<Key>
+				<KeyName>SLY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow length: LZ" type="double">
+			<Key>
+				<KeyName>SLZ</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular shadow ratio" type="double">
+			<Key>
+				<KeyName>SRatio</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="8">
+			<OutputGroup name="Molecular area (vdW area)" category="Structural">
+				<OutputKey>Area</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Molecular volume (vdW volume)" category="Structural">
+				<OutputKey>Volume</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Molecular density" category="Structural">
+				<OutputKey>Density</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Moments of inertia" category="Spatial">
+				<OutputKey>PMITOT40</OutputKey>
+				<OutputKey>PMIXX40</OutputKey>
+				<OutputKey>PMIYY40</OutputKey>
+				<OutputKey>PMIZZ40</OutputKey>
+				<OutputKey defaultCalc="0">PMITOT</OutputKey>
+				<OutputKey defaultCalc="0">PMIXX</OutputKey>
+				<OutputKey defaultCalc="0">PMIYY</OutputKey>
+				<OutputKey defaultCalc="0">PMIZZ</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Radius of gyration" category="Spatial">
+				<OutputKey>RGyr</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Ellipsoidal volume" category="Spatial">
+				<OutputKey>EllipsoidalVolume</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Molecular shadow indices" category="Spatial">
+				<OutputKey>SXY40</OutputKey>
+				<OutputKey>SYZ40</OutputKey>
+				<OutputKey>SZX40</OutputKey>
+				<OutputKey>SXYF40</OutputKey>
+				<OutputKey>SYZF40</OutputKey>
+				<OutputKey>SZXF40</OutputKey>
+				<OutputKey>SLX40</OutputKey>
+				<OutputKey>SLY40</OutputKey>
+				<OutputKey>SLZ40</OutputKey>
+				<OutputKey>SRatio40</OutputKey>
+
+				<OutputKey defaultCalc="0">SXY</OutputKey>
+				<OutputKey defaultCalc="0">SYZ</OutputKey>
+				<OutputKey defaultCalc="0">SZX</OutputKey>
+				<OutputKey defaultCalc="0">SXYF</OutputKey>
+				<OutputKey defaultCalc="0">SYZF</OutputKey>
+				<OutputKey defaultCalc="0">SZXF</OutputKey>
+				<OutputKey defaultCalc="0">SLX</OutputKey>
+				<OutputKey defaultCalc="0">SLY</OutputKey>
+				<OutputKey defaultCalc="0">SLZ</OutputKey>
+				<OutputKey defaultCalc="0">SRatio</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Molecular dipole moment" category="Multipoles">
+				<OutputKey>DIPMOMTOT</OutputKey>
+				<OutputKey>DIPMOMX</OutputKey>
+				<OutputKey>DIPMOMY</OutputKey>
+				<OutputKey>DIPMOMZ</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineSpatial" engineName="Spatial Descriptors"/>
+	</Relationship>
+</PredictiveModel>

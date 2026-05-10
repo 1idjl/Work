@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="descriptor" GUID="{C6AB970E-1683-4233-A4C5-1D30A60DC0DE}">
+		<Name>Geometry Measurements</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2006-03-01T11:40:00</DateCreated>
+		<DateModified>2006-03-01T13:00:00</DateModified>
+		<Note>A model to extract geometry measurement information from structures</Note>
+	</BasicInformation>
+	<Inputs number="1">
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+		</Input>
+	</Inputs>
+	<Outputs number="6">
+		<Output name="Distance measurement"  type="double" isArrayType="true">
+			<Key>
+				<KeyName>DistanceMeasurement</KeyName>
+			</Key>
+		</Output>
+		<Output name="Distance count" type="count">
+			<Key>
+				<KeyName>DistanceCount</KeyName>
+			</Key>
+		</Output>
+		<Output name="Angle measurement"  type="double" isArrayType="true">
+			<Key>
+				<KeyName>AngleMeasurement</KeyName>
+			</Key>
+		</Output>
+		<Output name="Angle count" type="count">
+			<Key>
+				<KeyName>AngleCount</KeyName>
+			</Key>
+		</Output>
+		<Output name="Torsion measurement"  type="double" isArrayType="true">
+			<Key>
+				<KeyName>TorsionMeasurement</KeyName>
+			</Key>
+		</Output>
+		<Output name="Torsion count" type="count">
+			<Key>
+				<KeyName>TorsionCount</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="3">
+			<OutputGroup name="Distance measurements" category="Geometry">
+				<OutputKey>DistanceMeasurement</OutputKey>
+				<OutputKey defaultCalc="0">DistanceCount</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Angle measurements" category="Geometry">
+				<OutputKey>AngleMeasurement</OutputKey>
+				<OutputKey defaultCalc="0">AngleCount</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Torsion measurements" category="Geometry">
+				<OutputKey>TorsionMeasurement</OutputKey>
+				<OutputKey defaultCalc="0">TorsionCount</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.GeometryMeasurements" engineName="Geometry Measurements"/>
+	</Relationship>
+</PredictiveModel>

@@ -1,0 +1,46 @@
+Forcite
+-------
+Task             : Geometry Optimization
+Version          : 2024
+Build date       : Oct 24 2023
+Host             : 1idjl
+Threads          : Scalar
+Operating system : Windows
+Task started     : Sat May  9 21:22:48 2026
+
+---- Geometry optimization parameters ----
+
+Algorithm                       : Smart
+Convergence tolerance:
+  Energy                        : 0.001 kcal/mol
+  Force                         : 0.5 kcal/mol/A
+Maximum number of iterations    : 5000
+External pressure               : 0 GPa
+Motion groups rigid             : NO
+Optimize cell                   : NO
+
+---- Energy parameters ----
+
+Forcefield                      : Universal
+Charges                         : Use current
+Electrostatic terms:
+  Summation method              : Ewald
+  Accuracy                      : 0.001 kcal/mol
+  Buffer width                  : 2 A
+
+van der Waals terms:
+  Summation method              : Atom based
+  Truncation method             : Cubic spline
+  Cutoff distance               : 12.5 A
+  Spline width                  : 1 A
+  Long range correction         : YES
+  Buffer width                  : 2 A
+
+The trajectory is marked as invalid.
+
+
+
+Task terminated                 : Sat May  9 21:22:48 2026
+Total CPU time used by Forcite  : 0 seconds (0.09s)
+
+Termination status : Error

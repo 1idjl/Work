@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="descriptor" GUID="{25D70174-9782-4D79-981A-058B2A681C17}">
+		<Name>Periodic Descriptors</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2003-09-25T17:06:27</DateCreated>
+		<DateModified>2003-09-25T17:06:27</DateModified>
+		<Note>A model to obtain periodic descriptor information</Note>
+	</BasicInformation>
+	<Inputs number="1">
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+		</Input>
+	</Inputs>
+	<Outputs number="14">
+		<Output name="Length a" type="length">
+			<Key>
+				<KeyName>LengthA</KeyName>
+			</Key>
+		</Output>
+		<Output name="Length b" type="length">
+			<Key>
+				<KeyName>LengthB</KeyName>
+			</Key>
+		</Output>
+		<Output name="Length c" type="length">
+			<Key>
+				<KeyName>LengthC</KeyName>
+			</Key>
+		</Output>
+		<Output name="Angle alpha" type="double">
+			<Key>
+				<KeyName>AngleAlpha</KeyName>
+			</Key>
+		</Output>
+		<Output name="Angle beta" type="double">
+			<Key>
+				<KeyName>AngleBeta</KeyName>
+			</Key>
+		</Output>
+		<Output name="Angle gamma" type="double">
+			<Key>
+				<KeyName>AngleGamma</KeyName>
+			</Key>
+		</Output>
+		<Output name="Cell volume" type="volume">
+			<Key>
+				<KeyName>CellVolume</KeyName>
+			</Key>
+		</Output>
+		<Output name="Density" type="double">
+			<Key>
+				<KeyName>Density</KeyName>
+			</Key>
+		</Output>
+		<Output name="Space group" type="string">
+			<Key>
+				<KeyName>GroupName</KeyName>
+			</Key>
+		</Output>
+		<Output name="Length u" type="length">
+			<Key>
+				<KeyName>LengthU</KeyName>
+			</Key>
+		</Output>
+		<Output name="Length v" type="length">
+			<Key>
+				<KeyName>LengthV</KeyName>
+			</Key>
+		</Output>
+		<Output name="Angle theta" type="double">
+			<Key>
+				<KeyName>AngleTheta</KeyName>
+			</Key>
+		</Output>
+		<Output name="Cell area" type="area">
+			<Key>
+				<KeyName>CellArea</KeyName>
+			</Key>
+		</Output>
+		<Output name="Plane group" type="string">
+			<Key>
+				<KeyName>PlaneGroupName</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="4">
+			<OutputGroup name="Unit cell dimensions" category="Structural">
+				<OutputKey>LengthA</OutputKey>
+				<OutputKey>LengthB</OutputKey>
+				<OutputKey>LengthC</OutputKey>
+				<OutputKey>AngleAlpha</OutputKey>
+				<OutputKey>AngleBeta</OutputKey>
+				<OutputKey>AngleGamma</OutputKey>
+				<OutputKey>CellVolume</OutputKey>
+				<OutputKey>Density</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Space group" category="Structural">
+				<OutputKey>GroupName</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Mesh dimensions" category="Structural">
+				<OutputKey>LengthU</OutputKey>
+				<OutputKey>LengthV</OutputKey>
+				<OutputKey>AngleTheta</OutputKey>
+				<OutputKey>CellArea</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Plane group" category="Structural">
+				<OutputKey>PlaneGroupName</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineDMPeriodic" engineName="Periodic Descriptors"/>
+	</Relationship>
+</PredictiveModel>

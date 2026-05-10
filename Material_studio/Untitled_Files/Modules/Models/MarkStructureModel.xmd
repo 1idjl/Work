@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="descriptor" GUID="{95F71A99-F57D-4a64-A1FD-5205AB2F4BD0}">
+		<Name>Mark Structures</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2004-02-27T11:40:00</DateCreated>
+		<DateModified>2006-02-28T13:00:00</DateModified>
+		<Note>A model to mark structures with atoms or measurements of interest for atom based property calculation</Note>
+	</BasicInformation>
+	<Inputs number="6">
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+		</Input>
+		<Input name="Type of marking" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>MarkType</KeyName>
+			</Key>
+			<Value>Atom Sets</Value>
+			<Range type="enumeration" number="4">
+				<Item name="Atom Sets" value="1"/>
+				<Item name="Measurements" value="2"/>
+				<Item name="Both" value="3"/>
+				<Item name="All Atoms" value="4"/>
+			</Range>
+		</Input>
+		<Input name="Template fragment" type="structure" role="Parameter" permittedRoles="Parameter" dependsOn="MarkType" applicableIf="Atom Sets,Measurements,Both">
+			<Key>
+				<KeyName>Template</KeyName>
+			</Key>
+			<Value/>
+		</Input>
+		<Input name="Convert bonds to resonant" type="boolean" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ConvertToResonant</KeyName>
+			</Key>
+			<Value>-1</Value>
+		</Input>
+		<Input name="Allow overlaps" type="boolean" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>AllowOverlaps</KeyName>
+			</Key>
+			<Value>0</Value>
+		</Input>
+		<Input name="Remove existing markings" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>RemoveExistingMarkings</KeyName>
+			</Key>
+			<Value>Type of marking</Value>
+			<Range type="enumeration" number="5">
+				<Item name="None" value="1"/>
+				<Item name="Atom Sets" value="2"/>
+				<Item name="Measurements" value="3"/>
+				<Item name="Both" value="4"/>
+				<Item name="Type of marking" value="5"/>
+			</Range>
+		</Input>
+	</Inputs>
+	<Outputs number="2">
+		<Output name="Marked structure" type="structure">
+			<Key>
+				<KeyName>MarkedStructure</KeyName>
+			</Key>
+		</Output>
+		<Output name="Fragments found" type="count">
+			<Key>
+				<KeyName>FragmentCount</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="1">
+			<OutputGroup name="Marked structure" category="Structural">
+				<OutputKey>MarkedStructure</OutputKey>
+				<OutputKey>FragmentCount</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.MarkStructure" engineName="Mark Structures"/>
+	</Relationship>
+</PredictiveModel>

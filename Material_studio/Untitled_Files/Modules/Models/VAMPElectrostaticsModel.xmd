@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="simulation" GUID="{4CFAEB8A-F236-4EF3-A2E4-D96D3E7F71DA}">
+		<Name>VAMP Electrostatics</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2003-09-25T17:06:27</DateCreated>
+		<DateModified>2003-09-25T17:06:27</DateModified>
+		<Note>A model to calculate electrostatic descriptors using VAMP</Note>
+	</BasicInformation>
+	<Inputs number="7">
+		<Input name="Task type" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Task</KeyName>
+			</Key>
+			<Value>Energy</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Energy" value="1"/>
+				<Item name="Geometry Optimization" value="2"/>
+			</Range>
+		</Input>
+		<Input name="Hamiltonian" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Hamiltonian</KeyName>
+			</Key>
+			<Value>AM1</Value>
+			<Range type="enumeration" number="7">
+				<Item name="AM1" value="1"/>
+				<Item name="AM1*" value="2"/>
+				<Item name="MNDO" value="3"/>
+				<Item name="MNDO/C" value="4"/>
+				<Item name="MNDO/d" value="5"/>
+				<Item name="PM3" value="6"/>
+				<Item name="PM6" value="7"/>
+			</Range>
+		</Input>
+		<Input name="Formalism" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Formalism</KeyName>
+			</Key>
+			<Value>RHF</Value>
+			<Range type="enumeration" number="3">
+				<Item name="UHF" value="1"/>
+				<Item name="RHF" value="2"/>
+				<Item name="AUHF" value="3"/>
+			</Range>
+		</Input>
+		<Input name="Charge" type="long" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Charge</KeyName>
+			</Key>
+			<Value>0</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="-1000"/>
+				<Item name="Max" value="1000"/>
+			</Range>
+		</Input>
+		<Input name="Solvent" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Solvent</KeyName>
+			</Key>
+			<Value>None</Value>
+			<Range type="enumeration" number="16">
+				<Item name="None" value="1"/>
+				<Item name="Acetone" value="2"/>
+				<Item name="Acetonitrile" value="3"/>
+				<Item name="Benzene" value="4"/>
+				<Item name="Carbon tetrachloride" value="5"/>
+				<Item name="Chloroform" value="6"/>
+				<Item name="Diethyl ether" value="7"/>
+				<Item name="Dimethyl sulfoxide" value="8"/>
+				<Item name="Ethanol" value="9"/>
+				<Item name="Methanol" value="10"/>
+				<Item name="Methylene chloride" value="11"/>
+				<Item name="n-Hexane" value="12"/>
+				<Item name="n-Hexadecane" value="13"/>
+				<Item name="Nitrobenzene" value="14"/>
+				<Item name="Pyridine" value="15"/>
+				<Item name="Water" value="16"/>
+			</Range>
+		</Input>
+		<Input name="Use internal coordinates" type="boolean" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>UseInternalCoordinates</KeyName>
+			</Key>
+			<Value>0</Value>
+		</Input>
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+		</Input>
+	</Inputs>
+	<Outputs number="20">
+		<Output name="Total ZDO dipole" type="double">
+			<Key>
+				<KeyName>TOTAL ZDO DIPOL</KeyName>
+		        </Key>
+		</Output>
+		<Output name="ZDO Dipole x" type="double">
+			<Key>
+				<KeyName>ZDODIPOLX</KeyName>
+			</Key>
+		</Output>
+		<Output name="ZDO Dipole y" type="double">
+			<Key>
+				<KeyName>ZDODIPOLY</KeyName>
+			</Key>
+		</Output>
+		<Output name="ZDO Dipole z" type="double">
+			<Key>
+				<KeyName>ZDODIPOLZ</KeyName>
+			</Key>
+		</Output>
+		<Output name="Structure" type="structure">
+			<Key>
+				<KeyName>Optimized Structure</KeyName>
+			</Key>
+		</Output>
+		<Output name="Total energy" type="energy">
+			<Key>
+				<KeyName>TOTAL ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Heat of formation" type="energy">
+			<Key>
+				<KeyName>HEAT OF FORMATION</KeyName>
+			</Key>
+		</Output>
+		<Output name="Electronic energy" type="energy">
+			<Key>
+				<KeyName>ELECTRONIC ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="HOMO eigenvalue" type="energy">
+			<Key>
+				<KeyName>HOMO</KeyName>
+			</Key>
+		</Output>
+		<Output name="LUMO eigenvalue" type="energy">
+			<Key>
+				<KeyName>LUMO</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular surface area" type="area">
+			<Key>
+				<KeyName>MOLAREA</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular point group" type="string">
+			<Key>
+				<KeyName>POINT-GROUP</KeyName>
+			</Key>
+		</Output>
+		<Output name="Mean polarizability" type="double">
+			<Key>
+				<KeyName>MEANPOL</KeyName>
+			</Key>
+		</Output>
+		<Output name="Total dipole" type="double">
+			<Key>
+				<KeyName>TOTAL DIPOL</KeyName>
+			</Key>
+		</Output>
+		<OutputArray name="Dipole components" type="double">
+			<Key>
+				<KeyName>DIPOL</KeyName>
+			</Key>
+			<OutputItems number="3">
+				<OutputItem>Dipole x</OutputItem>
+				<OutputItem>Dipole y</OutputItem>
+				<OutputItem>Dipole z</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="Quadrupole components" type="double">
+			<Key>
+				<KeyName>QUADPOL</KeyName>
+			</Key>
+			<OutputItems number="6">
+				<OutputItem>Quadrupole xx</OutputItem>
+				<OutputItem>Quadrupole xy</OutputItem>
+				<OutputItem>Quadrupole yy</OutputItem>
+				<OutputItem>Quadrupole xz</OutputItem>
+				<OutputItem>Quadrupole yz</OutputItem>
+				<OutputItem>Quadrupole zz</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="Octupole components" type="double">
+			<Key>
+				<KeyName>OCTUPOL</KeyName>
+			</Key>
+			<OutputItems number="10">
+				<OutputItem>Octupole xxx</OutputItem>
+				<OutputItem>Octupole xxy</OutputItem>
+				<OutputItem>Octupole xxz</OutputItem>
+				<OutputItem>Octupole xyy</OutputItem>
+				<OutputItem>Octupole xyz</OutputItem>
+				<OutputItem>Octupole xzz</OutputItem>
+				<OutputItem>Octupole yyy</OutputItem>
+				<OutputItem>Octupole yyz</OutputItem>
+				<OutputItem>Octupole yzz</OutputItem>
+				<OutputItem>Octupole zzz</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<Output name="ESP charge" type="double" isArrayType="true">
+			<Key>
+				<KeyName>VESPA</KeyName>
+			</Key>
+		</Output>
+		<Output name="Coulson charge" type="double" isArrayType="true">
+			<Key>
+				<KeyName>COULSON CHARGES</KeyName>
+			</Key>
+		</Output>
+		<Output name="Mulliken charge" type="double" isArrayType="true">
+			<Key>
+				<KeyName>MULLIKEN CHARGES</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="11">
+			<OutputGroup name="Structure" category="Structure">
+				<OutputKey>Optimized Structure</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Energy" category="Energies">
+				<OutputKey>TOTAL ENERGY</OutputKey>
+				<OutputKey>ELECTRONIC ENERGY</OutputKey>
+				<OutputKey>HEAT OF FORMATION</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Orbitals" category="Energies">
+				<OutputKey>HOMO</OutputKey>
+				<OutputKey>LUMO</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Molecular surface area" category="Structural">
+				<OutputKey>MOLAREA</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Molecular point group" category="Structural">
+				<OutputKey>POINT-GROUP</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Dipole" category="Multipoles">
+				<OutputKey>TOTAL DIPOL</OutputKey>
+				<OutputKey>DIPOL</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Quadrupole" category="Multipoles">
+				<OutputKey>QUADPOL</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Octupole" category="Multipoles">
+				<OutputKey>OCTUPOL</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Dipole (ZDO)" category="Multipoles">
+				<OutputKey>TOTAL ZDO DIPOL</OutputKey>
+				<OutputKey>ZDODIPOLX</OutputKey>
+                                <OutputKey>ZDODIPOLY</OutputKey>
+                                <OutputKey>ZDODIPOLZ</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Mean polarizability" category="Multipoles">
+				<OutputKey>MEANPOL</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Atomic charges" category="Charges">
+				<OutputKey>VESPA</OutputKey>
+				<OutputKey>COULSON CHARGES</OutputKey>
+				<OutputKey>MULLIKEN CHARGES</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineVAMP" engineName="VAMP">
+			<SimpleEngineParameters>
+				<Value key="SCFCRT" type="double">0.00001</Value>
+				<Value key="ITRY" type="long">200</Value>
+			</SimpleEngineParameters>
+		</SimpleEngine>
+	</Relationship>
+</PredictiveModel>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="descriptor" GUID="{5A199A59-DE94-4A2B-93E7-31DEF8B32A88}">
+		<Name>Atomistic Descriptors</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2003-09-25T17:06:27</DateCreated>
+		<DateModified>2003-09-25T17:06:27</DateModified>
+		<Note>A model to obtain atomic descriptor information</Note>
+	</BasicInformation>
+	<Inputs number="2">
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+		</Input>
+		<Input name="Element name" type="element" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Element name</KeyName>
+			</Key>
+			<Value>C</Value>
+		</Input>
+	</Inputs>
+	<Outputs number="5">
+		<Output name="Total charge" type="charge">
+			<Key>
+				<KeyName>Charge</KeyName>
+			</Key>
+		</Output>
+		<Output name="Total formal charge" type="charge">
+			<Key>
+				<KeyName>FormalCharge</KeyName>
+			</Key>
+		</Output>
+		<Output name="Total molecular mass" type="double">
+			<Key>
+				<KeyName>Mass</KeyName>
+			</Key>
+		</Output>
+		<Output name="Atom count" type="count">
+			<Key>
+				<KeyName>Atom count</KeyName>
+			</Key>
+		</Output>
+		<Output name="Element count" type="count">
+			<Key>
+				<KeyName>Element count</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="5">
+			<OutputGroup name="Total charge" category="Charges">
+				<OutputKey>Charge</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Total formal charge" category="Charges">
+				<OutputKey>FormalCharge</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Total molecular mass" category="Structural">
+				<OutputKey>Mass</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Atom count" category="Feature counts">
+				<OutputKey>Atom count</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Element count" category="Feature counts">
+				<OutputKey>Element count</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineDMAtomistic" engineName="Atomistic Descriptors"/>
+	</Relationship>
+</PredictiveModel>

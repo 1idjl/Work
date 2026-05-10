@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="simulation" GUID="{538BCA41-CAB0-40c9-99C4-79CC64216467}">
+		<Name>Polymorph Clustering</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2004-08-02T17:06:27</DateCreated>
+		<DateModified>2004-08-02T17:06:27</DateModified>
+		<Note>A model to cluster polymorphs according to their crystal similarity.</Note>
+	</BasicInformation>
+	<Inputs number="5">
+		<Input name="Tolerance" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ClusterTolerance</KeyName>
+			</Key>
+			<Value>0.13</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.0"/>
+				<Item name="Max" value="1.0"/>
+			</Range>
+		</Input>
+		<Input name="Cutoff" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ClusterCutoff</KeyName>
+			</Key>
+			<Value>7</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.0"/>
+				<Item name="Max" value="100.0"/>
+			</Range>
+		</Input>
+		<Input name="Number of bins" type="long" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ClusterNumberBins</KeyName>
+			</Key>
+			<Value>140</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="1"/>
+				<Item name="Max" value="1000"/>
+			</Range>
+		</Input>
+		<Input name="Cluster grouping" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ClusterGrouping</KeyName>
+			</Key>
+			<Value>Forcefield type</Value>
+			<Range type="enumeration" number="3">
+				<Item name="Forcefield type" value="1"/>
+				<Item name="Element" value="2"/>
+				<Item name="Name" value="3"/>
+			</Range>
+		</Input>
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>InputPoints</KeyName>
+			</Key>
+		</Input>
+	</Inputs>
+	<Outputs number="3">
+		<Output name="Cluster number" type="long">
+			<Key>
+				<KeyName>ClusterNumber</KeyName>
+			</Key>
+		</Output>
+		<Output name="Rank in cluster" type="long">
+			<Key>
+				<KeyName>RankInCluster</KeyName>
+			</Key>
+		</Output>
+		<Output name="Similarity to cluster reference" type="double">
+			<Key>
+				<KeyName>SimilarityToRank1</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="1">
+			<OutputGroup name="Polymorph clustering" category="Crystallization">
+				<OutputKey>ClusterNumber</OutputKey>
+				<OutputKey>RankInCluster</OutputKey>
+				<OutputKey>SimilarityToRank1</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEnginePMPClustering" engineName="Polymorph Clustering"/>
+	</Relationship>
+</PredictiveModel>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="simulation" GUID="{498EDF30-95C0-43BE-8085-E2F8A67C9674}">
+		<Name>Crystal Similarity Measure</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2003-09-25T17:06:27</DateCreated>
+		<DateModified>2003-09-25T17:06:27</DateModified>
+		<Note>A model to compare crystal structures to a reference crystal.</Note>
+	</BasicInformation>
+	<Inputs number="5">
+		<Input name="Reference crystal" type="structure" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ReferenceStructure</KeyName>
+			</Key>
+			<Value></Value>
+			<Range type="enumeration" number="1">
+				<Item name="3DPeriodic" value="1"/>
+			</Range>
+		</Input>
+		<Input name="Cutoff" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ClusterCutoff</KeyName>
+			</Key>
+			<Value>7</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.0"/>
+				<Item name="Max" value="100.0"/>
+			</Range>
+		</Input>
+		<Input name="Number of bins" type="long" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ClusterNumberBins</KeyName>
+			</Key>
+			<Value>140</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="1"/>
+				<Item name="Max" value="1000"/>
+			</Range>
+		</Input>
+		<Input name="Cluster grouping" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ClusterGrouping</KeyName>
+			</Key>
+			<Value>Element</Value>
+			<Range type="enumeration" number="3">
+				<Item name="Forcefield type" value="1"/>
+				<Item name="Element" value="2"/>
+				<Item name="Name" value="3"/>
+			</Range>
+		</Input>
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>InputStructure</KeyName>
+			</Key>
+		</Input>
+	</Inputs>
+	<Outputs number="1">
+		<Output name="Crystal similarity" type="double">
+			<Key>
+				<KeyName>ClusterMeasure</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="1">
+			<OutputGroup name="Crystal similarity" category="Crystallization">
+				<OutputKey>ClusterMeasure</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEnginePMPClusterMeasure" engineName="Crystal Similarity"/>
+	</Relationship>
+</PredictiveModel>

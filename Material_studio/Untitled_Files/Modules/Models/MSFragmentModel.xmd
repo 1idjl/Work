@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="descriptor" GUID="{245CAF1B-4B82-4B5E-9B14-46D5A248643B}">
+		<Name>Fragment Counts</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2003-09-25T17:06:27</DateCreated>
+		<DateModified>2004-09-29T15:22:00</DateModified>
+		<Note>A model to count occurrences of specified fragments</Note>
+	</BasicInformation>
+	<Inputs number="4">
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+		</Input>
+		<Input name="Heavy atoms only" type="boolean" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>IgnoreHydrogen</KeyName>
+			</Key>
+			<Value>0</Value>
+		</Input>
+		<Input name="Convert bonds to resonant" type="boolean" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ConvertToResonant</KeyName>
+			</Key>
+			<Value>-1</Value>
+		</Input>
+		<Input name="Allow overlaps" type="boolean" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>AllowOverlaps</KeyName>
+			</Key>
+			<Value>-1</Value>
+		</Input>
+	</Inputs>
+	<Outputs number="44">
+		<Output name="Acid anhydride" type="count">
+			<Key>
+				<KeyName>Functional Groups/Acid Anhydride</KeyName>
+			</Key>
+		</Output>
+		<Output name="Acid chloride" type="count">
+			<Key>
+				<KeyName>Functional Groups/Acid Chloride</KeyName>
+			</Key>
+		</Output>
+		<Output name="Amide" type="count">
+			<Key>
+				<KeyName>Functional Groups/Amide</KeyName>
+			</Key>
+		</Output>
+		<Output name="Amine" type="count">
+			<Key>
+				<KeyName>Functional Groups/Amine</KeyName>
+			</Key>
+		</Output>
+		<Output name="Azo" type="count">
+			<Key>
+				<KeyName>Functional Groups/Azo</KeyName>
+			</Key>
+		</Output>
+		<Output name="B-dicarbonyl" type="count">
+			<Key>
+				<KeyName>Functional Groups/B-Dicarbonyl</KeyName>
+			</Key>
+		</Output>
+		<Output name="Carboxylate" type="count">
+			<Key>
+				<KeyName>Functional Groups/Carboxylate</KeyName>
+			</Key>
+		</Output>
+		<Output name="Carboxylic Acid" type="count">
+			<Key>
+				<KeyName>Functional Groups/Carboxylic Acid</KeyName>
+			</Key>
+		</Output>
+		<Output name="Diazo+" type="count">
+			<Key>
+				<KeyName>Functional Groups/Diazo+</KeyName>
+			</Key>
+		</Output>
+		<Output name="Glycerol" type="count">
+			<Key>
+				<KeyName>Functional Groups/Glycerol</KeyName>
+			</Key>
+		</Output>
+		<Output name="Glycol" type="count">
+			<Key>
+				<KeyName>Functional Groups/Glycol</KeyName>
+			</Key>
+		</Output>
+		<Output name="Hydrazone" type="count">
+			<Key>
+				<KeyName>Functional Groups/Hydrazone</KeyName>
+			</Key>
+		</Output>
+		<Output name="Hydroxy" type="count">
+			<Key>
+				<KeyName>Functional Groups/Hydroxy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Methanal" type="count">
+			<Key>
+				<KeyName>Functional Groups/Methanal</KeyName>
+			</Key>
+		</Output>
+		<Output name="Methoxy" type="count">
+			<Key>
+				<KeyName>Functional Groups/Methoxy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Nitrile" type="count">
+			<Key>
+				<KeyName>Functional Groups/Nitrile</KeyName>
+			</Key>
+		</Output>
+		<Output name="Nitro" type="count">
+			<Key>
+				<KeyName>Functional Groups/Nitro</KeyName>
+			</Key>
+		</Output>
+		<Output name="Nitroso" type="count">
+			<Key>
+				<KeyName>Functional Groups/Nitroso</KeyName>
+			</Key>
+		</Output>
+		<Output name="Oxime" type="count">
+			<Key>
+				<KeyName>Functional Groups/Oxime</KeyName>
+			</Key>
+		</Output>
+		<Output name="Peroxide" type="count">
+			<Key>
+				<KeyName>Functional Groups/Peroxide</KeyName>
+			</Key>
+		</Output>
+		<Output name="Phenoxy" type="count">
+			<Key>
+				<KeyName>Functional Groups/Phenoxy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Phosphate" type="count">
+			<Key>
+				<KeyName>Functional Groups/Phosphate</KeyName>
+			</Key>
+		</Output>
+		<Output name="Quaternary amine" type="count">
+			<Key>
+				<KeyName>Functional Groups/Quaternary Amine</KeyName>
+			</Key>
+		</Output>
+		<Output name="Sulfonic acid" type="count">
+			<Key>
+				<KeyName>Functional Groups/Sulfonic Acid</KeyName>
+			</Key>
+		</Output>
+		<Output name="Sulfoxy amide" type="count">
+			<Key>
+				<KeyName>Functional Groups/Sulfoxy Amide</KeyName>
+			</Key>
+		</Output>
+		<Output name="Sulfoxy chloride" type="count">
+			<Key>
+				<KeyName>Functional Groups/Sulfoxy Chloride</KeyName>
+			</Key>
+		</Output>
+		<Output name="Sulfoxy ester" type="count">
+			<Key>
+				<KeyName>Functional Groups/Sulfoxy Ester</KeyName>
+			</Key>
+		</Output>
+		<Output name="Thiol" type="count">
+			<Key>
+				<KeyName>Functional Groups/Thiol</KeyName>
+			</Key>
+		</Output>
+		<Output name="Tosyl" type="count">
+			<Key>
+				<KeyName>Functional Groups/Tosyl</KeyName>
+			</Key>
+		</Output>
+		<Output name="Butadiene" type="count">
+			<Key>
+				<KeyName>Hydrocarbons/Butadiene</KeyName>
+			</Key>
+		</Output>
+		<Output name="Butyl" type="count">
+			<Key>
+				<KeyName>Hydrocarbons/Butyl</KeyName>
+			</Key>
+		</Output>
+		<Output name="Ethyl" type="count">
+			<Key>
+				<KeyName>Hydrocarbons/Ethyl</KeyName>
+			</Key>
+		</Output>
+		<Output name="Ethylene" type="count">
+			<Key>
+				<KeyName>Hydrocarbons/Ethylene</KeyName>
+			</Key>
+		</Output>
+		<Output name="Isobutyl" type="count">
+			<Key>
+				<KeyName>Hydrocarbons/Isobutyl</KeyName>
+			</Key>
+		</Output>
+		<Output name="Isopropyl" type="count">
+			<Key>
+				<KeyName>Hydrocarbons/Isopropyl</KeyName>
+			</Key>
+		</Output>
+		<Output name="Methyl" type="count">
+			<Key>
+				<KeyName>Hydrocarbons/Methyl</KeyName>
+			</Key>
+		</Output>
+		<Output name="Propyl" type="count">
+			<Key>
+				<KeyName>Hydrocarbons/Propyl</KeyName>
+			</Key>
+		</Output>
+		<Output name="Propylene" type="count">
+			<Key>
+				<KeyName>Hydrocarbons/Propylene</KeyName>
+			</Key>
+		</Output>
+    <Output name="Secondary butyl" type="count">
+      <Key>
+        <KeyName>Hydrocarbons/Secondary Butyl</KeyName>
+      </Key>
+    </Output>
+    <Output name="Tertiary butyl" type="count">
+      <Key>
+        <KeyName>Hydrocarbons/Tertiary Butyl</KeyName>
+      </Key>
+    </Output>
+    <Output name="Phenyl" type="count">
+			<Key>
+				<KeyName>Rings/Benzene</KeyName>
+			</Key>
+		</Output>
+		<Output name="Cyclohexane" type="count">
+			<Key>
+				<KeyName>Rings/Cyclohexane</KeyName>
+			</Key>
+		</Output>
+		<Output name="Cytosine" type="count">
+			<Key>
+				<KeyName>Rings/Cytosine</KeyName>
+			</Key>
+		</Output>
+		<Output name="Indole" type="count">
+			<Key>
+				<KeyName>Rings/Indole</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="3">
+			<OutputGroup name="Functional group count" category="Feature counts">
+				<OutputKey>Functional Groups/Acid Anhydride</OutputKey>
+				<OutputKey>Functional Groups/Acid Chloride</OutputKey>
+				<OutputKey>Functional Groups/Amide</OutputKey>
+				<OutputKey>Functional Groups/Amine</OutputKey>
+				<OutputKey>Functional Groups/Azo</OutputKey>
+				<OutputKey>Functional Groups/B-Dicarbonyl</OutputKey>
+				<OutputKey>Functional Groups/Carboxylate</OutputKey>
+				<OutputKey>Functional Groups/Carboxylic Acid</OutputKey>
+				<OutputKey>Functional Groups/Diazo+</OutputKey>
+				<OutputKey>Functional Groups/Glycerol</OutputKey>
+				<OutputKey>Functional Groups/Glycol</OutputKey>
+				<OutputKey>Functional Groups/Hydrazone</OutputKey>
+				<OutputKey>Functional Groups/Hydroxy</OutputKey>
+				<OutputKey>Functional Groups/Methanal</OutputKey>
+				<OutputKey>Functional Groups/Methoxy</OutputKey>
+				<OutputKey>Functional Groups/Nitrile</OutputKey>
+				<OutputKey>Functional Groups/Nitro</OutputKey>
+				<OutputKey>Functional Groups/Nitroso</OutputKey>
+				<OutputKey>Functional Groups/Oxime</OutputKey>
+				<OutputKey>Functional Groups/Peroxide</OutputKey>
+				<OutputKey>Functional Groups/Phenoxy</OutputKey>
+				<OutputKey>Functional Groups/Phosphate</OutputKey>
+				<OutputKey>Functional Groups/Quaternary Amine</OutputKey>
+				<OutputKey>Functional Groups/Sulfonic Acid</OutputKey>
+				<OutputKey>Functional Groups/Sulfoxy Amide</OutputKey>
+				<OutputKey>Functional Groups/Sulfoxy Chloride</OutputKey>
+				<OutputKey>Functional Groups/Sulfoxy Ester</OutputKey>
+				<OutputKey>Functional Groups/Thiol</OutputKey>
+				<OutputKey>Functional Groups/Tosyl</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Hydrocarbon count" category="Feature counts">
+				<OutputKey>Hydrocarbons/Butadiene</OutputKey>
+				<OutputKey>Hydrocarbons/Butyl</OutputKey>
+				<OutputKey>Hydrocarbons/Ethyl</OutputKey>
+				<OutputKey>Hydrocarbons/Ethylene</OutputKey>
+				<OutputKey>Hydrocarbons/Isobutyl</OutputKey>
+				<OutputKey>Hydrocarbons/Isopropyl</OutputKey>
+				<OutputKey>Hydrocarbons/Methyl</OutputKey>
+				<OutputKey>Hydrocarbons/Propyl</OutputKey>
+				<OutputKey>Hydrocarbons/Propylene</OutputKey>
+        <OutputKey>Hydrocarbons/Secondary Butyl</OutputKey>
+        <OutputKey>Hydrocarbons/Tertiary Butyl</OutputKey>
+      </OutputGroup>
+			<OutputGroup name="Ring count" category="Feature counts">
+				<OutputKey>Rings/Benzene</OutputKey>
+				<OutputKey>Rings/Cyclohexane</OutputKey>
+				<OutputKey>Rings/Cytosine</OutputKey>
+				<OutputKey>Rings/Indole</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineDMFragment" engineName="Fragment Count"/>
+	</Relationship>
+</PredictiveModel>

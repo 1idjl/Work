@@ -1,0 +1,88 @@
+
+Module                          : Amorphous Cell
+Version                         : 2024
+Build date                      : Oct 24 2023
+Host                            : 1idjl
+Operating system                : Windows
+Task started                    : Sat May  9 21:06:13 2026
+
+
+Random number seed              : 133338267
+
+
+---- Amorphous Cell calculation ----
+
+Task                            : Construction
+Density                         : 2.600 g/cc
+Number of frames                : 1
+Optimize geometry               : yes
+Loading steps                   : 1000
+Check ring spearing             : yes
+Restrain rings                  : no
+Check close contacts            : no
+Check energies                  : yes
+Bias temperature                : 298.000 K
+Look ahead                      : 1
+
+Framework charge                : 0.000 e per cell
+
+ | Component     | Charge      | Loading     |
+ |               |             |             |
+ |____________________________________________
+ | SiO2_fragment |       0.000 |          60 |
+ | CaO_fragment  |       0.000 |          36 |
+ | P2O5_fragment |       0.000 |           4 |
+
+
+
+
+---- Construction task parameters ----
+
+Ramp density                    : no
+
+
+
+---- Energy parameters ----
+
+Forcefield                      : Universal
+Charges                         : Use current
+Electrostatic terms:
+  Summation method              : Ewald
+  Accuracy                      : 0.001 kcal/mol
+  Buffer width                  : 0.5 A
+
+van der Waals terms:
+  Summation method              : Atom based
+  Truncation method             : Cubic spline
+  Cutoff distance               : 12.5 A
+  Spline width                  : 1 A
+  Buffer width                  : 0.5 A
+
+
+
+---- Configurational Bias Monte Carlo method parameters ----
+
+ | Component     | Head bias   | Torsion     | Torsion     |
+ |               | steps       | twisters    | bias steps  |
+ |__________________________________________________________
+ | SiO2_fragment |          10 |           0 |             |
+ | CaO_fragment  |          10 |           0 |             |
+ | P2O5_fragment |          10 |           0 |             |
+
+
+
+---- Geometry optimization ----
+
+Energy units          : kcal/mol
+
+   Frame     Converged         Total      Non-bond        H-bond van der Waals Electrostatic        3-Body      Diagonal          Bond         Angle       Torsion     Inversion   Cross terms
+
+       1            No      1397.133      1327.315         0.000      1327.315         0.000         0.000        69.818        54.566         9.779         5.376         0.097         0.000
+
+
+
+Task terminated                 : Sat May  9 21:06:16 2026
+
+Total CPU time used             : 2 seconds
+
+Termination status              : Normal

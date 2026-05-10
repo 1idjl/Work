@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="simulation" GUID="{BE42A701-331D-4534-B8BD-735460349E60}">
+		<Name>Forcite Energetics</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2020-07-15T12:14:00</DateCreated>
+		<DateModified>2020-07-15T12:14:00</DateModified>
+		<Note>A model to calculate descriptors using Forcite</Note>
+	</BasicInformation>
+	<Inputs number="7">
+		<Input name="Task type" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Task</KeyName>
+			</Key>
+			<Value>Energy</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Energy" value="1"/>
+				<Item name="Geometry Optimization" value="2"/>
+			</Range>
+		</Input>
+		<Input name="Quality" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>CalculationQuality</KeyName>
+			</Key>
+			<Value>Medium</Value>
+			<Range type="enumeration" number="4">
+				<Item name="Coarse" value="1"/>
+				<Item name="Medium" value="2"/>
+				<Item name="Fine" value="3"/>
+				<Item name="Ultra-fine" value="4"/>
+			</Range>
+		</Input>
+		<Input name="Forcefield" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Forcefield</KeyName>
+			</Key>
+			<Value>Universal</Value>
+			<Range type="enumeration" number="5">
+				<Item name="Universal" value="1"/>
+				<Item name="Dreiding" value="2"/>
+				<Item name="COMPASSIII" value="3"/>
+				<Item name="cvff" value="4"/>
+				<Item name="pcff" value="5"/>
+      </Range>
+		</Input>
+		<Input name="Charge assignment" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>AssignCharges</KeyName>
+			</Key>
+			<Value>Automatic</Value>
+			<Range type="enumeration" number="4">
+				<Item name="Charge using QEq" value="1"/>
+				<Item name="Charge using Gasteiger" value="2"/>
+				<Item name="Use current" value="3"/>
+				<Item name="Automatic" value="4"/>
+			</Range>
+		</Input>
+		<Input name="Forcefield typing" type="boolean" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>AssignForcefieldTypes</KeyName>
+			</Key>
+			<Value>-1</Value>
+		</Input>
+		<Input name="Optimize cell parameters" type="boolean" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ulAutoSetCell</KeyName>
+			</Key>
+			<Value>-1</Value>
+		</Input>
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+		</Input>
+	</Inputs>
+	<Outputs number="21">
+		<Output name="Structure" type="structure">
+			<Key>
+				<KeyName>Optimized Structure</KeyName>
+			</Key>
+		</Output>
+		<Output name="Total energy" type="energy">
+			<Key>
+				<KeyName>PotentialEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Valence energy (diag. terms)" type="energy">
+			<Key>
+				<KeyName>ValenceDiagonalEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Bond energy" type="energy">
+			<Key>
+				<KeyName>BondEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Angle energy" type="energy">
+			<Key>
+				<KeyName>AngleEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Torsion energy" type="energy">
+			<Key>
+				<KeyName>TorsionEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Inversion energy" type="energy">
+			<Key>
+				<KeyName>InversionEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Valence energy (cross terms)" type="energy">
+			<Key>
+				<KeyName>ValenceCrossTermEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Stretch-Stretch energy" type="energy">
+			<Key>
+				<KeyName>StretchStretchEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Stretch-Bend-Stretch energy" type="energy">
+			<Key>
+				<KeyName>StretchBendStretchEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Stretch-Torsion-Stretch energy" type="energy">
+			<Key>
+				<KeyName>StretchTorsionStretchEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Separated-Stretch-Stretch energy" type="energy">
+			<Key>
+				<KeyName>SeparatedStretchStretchEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Torsion-Stretch energy" type="energy">
+			<Key>
+				<KeyName>TorsionStretchEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Bend-Bend energy" type="energy">
+			<Key>
+				<KeyName>BendBendEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Torsion-Bend-Bend energy" type="energy">
+			<Key>
+				<KeyName>TorsionBendBendEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Bend-Torsion-Bend energy" type="energy">
+			<Key>
+				<KeyName>BendTorsionBendEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Non bond energy" type="energy">
+			<Key>
+				<KeyName>NonBondEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Hydrogen bond energy" type="energy">
+			<Key>
+				<KeyName>HydrogenBondEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="van der Waals energy" type="energy">
+			<Key>
+				<KeyName>VanDerWaalsEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Electrostatic energy" type="energy">
+			<Key>
+				<KeyName>ElectrostaticEnergy</KeyName>
+			</Key>
+		</Output>
+		<Output name="Atomic charges" type ="double" isArrayType="true">
+			<Key>
+				<KeyName>AtomicCharges</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="5">
+			<OutputGroup name="Structure" category="Structure">
+				<OutputKey>Optimized Structure</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Total energy" category="Energies">
+				<OutputKey>PotentialEnergy</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Non bond energy" category="Energies">
+				<OutputKey>NonBondEnergy</OutputKey>
+				<OutputKey>HydrogenBondEnergy</OutputKey>
+				<OutputKey>VanDerWaalsEnergy</OutputKey>
+				<OutputKey>ElectrostaticEnergy</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Configuration energy" category="Energies">
+				<OutputKey>ValenceDiagonalEnergy</OutputKey>
+				<OutputKey>BondEnergy</OutputKey>
+				<OutputKey>AngleEnergy</OutputKey>
+				<OutputKey>TorsionEnergy</OutputKey>
+				<OutputKey>InversionEnergy</OutputKey>
+				<OutputKey>ValenceCrossTermEnergy</OutputKey>
+				<OutputKey>StretchStretchEnergy</OutputKey>
+				<OutputKey>StretchBendStretchEnergy</OutputKey>
+				<OutputKey>StretchTorsionStretchEnergy</OutputKey>
+				<OutputKey>SeparatedStretchStretchEnergy</OutputKey>
+				<OutputKey>TorsionStretchEnergy</OutputKey>
+				<OutputKey>BendBendEnergy</OutputKey>
+				<OutputKey>TorsionBendBendEnergy</OutputKey>
+				<OutputKey>BendTorsionBendEnergy</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Atomic charges" category="Charges">
+				<OutputKey>AtomicCharges</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineForcite" engineName="Forcite">
+			<SimpleEngineParameters/>
+		</SimpleEngine>
+	</Relationship>
+</PredictiveModel>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="simulation" GUID="{32B185F4-B79B-48CE-9A92-AFED690E1279}">
+		<Name>Powder Comparison</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2003-09-25T17:06:27</DateCreated>
+		<DateModified>2003-09-25T17:06:27</DateModified>
+		<Note>A model to compare simulated powder patterns to an experimental reference</Note>
+	</BasicInformation>
+	<Inputs number="11">
+		<Input name="Experimental data" type="chart2d" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ExpDocument</KeyName>
+			</Key>
+			<Value></Value>
+		</Input>
+		<Input name="Wavelength" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Wavelength1</KeyName>
+			</Key>
+			<Value>1.540562</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.0001"/>
+				<Item name="Max" value="5.0"/>
+			</Range>
+		</Input>
+		<Input name="Min 2-Theta" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>TwoThetaMin</KeyName>
+			</Key>
+			<Value>5</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.0000001"/>
+				<Item name="Max" value="180.0"/>
+			</Range>
+		</Input>
+		<Input name="Max 2-Theta" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>TwoThetaMax</KeyName>
+			</Key>
+			<Value>45</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="0.0000001"/>
+				<Item name="Max" value="180.0"/>
+			</Range>
+		</Input>
+		<Input name="Profile FWHM U" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ip_U</KeyName>
+			</Key>
+			<Value>0.01</Value>
+		</Input>
+		<Input name="Profile FWHM V" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ip_V</KeyName>
+			</Key>
+			<Value>-0.001</Value>
+		</Input>
+		<Input name="Profile FWHM W" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ip_W</KeyName>
+			</Key>
+			<Value>0.002</Value>
+		</Input>
+		<Input name="Profile NA" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ip_NA</KeyName>
+			</Key>
+			<Value>0.5</Value>
+		</Input>
+		<Input name="Profile NB" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>ip_NB</KeyName>
+			</Key>
+			<Value>0</Value>
+		</Input>
+		<Input name="CMACS intervals" type="long" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>CMACSIntervals</KeyName>
+			</Key>
+			<Value>10</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="1"/>
+				<Item name="Max" value="1000"/>
+			</Range>
+		</Input>
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>InputStructure</KeyName>
+			</Key>
+		</Input>
+	</Inputs>
+	<Outputs number="3">
+		<Output name="Rwp" type="double">
+			<Key>
+				<KeyName>FOM_RWP</KeyName>
+			</Key>
+		</Output>
+		<Output name="Rp" type="double">
+			<Key>
+				<KeyName>FOM_RP</KeyName>
+			</Key>
+		</Output>
+		<Output name="CMACS" type="double">
+			<Key>
+				<KeyName>FOM_CMACS</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="1">
+			<OutputGroup name="Figure of merit" category="Crystallization">
+				<OutputKey>FOM_RWP</OutputKey>
+				<OutputKey>FOM_RP</OutputKey>
+				<OutputKey>FOM_CMACS</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.PowderComparison" engineName="Powder Comparison">
+			<SimpleEngineParameters>
+				<Value key="Use2ndWavelength" type="bool">0</Value>
+			</SimpleEngineParameters>
+		</SimpleEngine>
+	</Relationship>
+</PredictiveModel>

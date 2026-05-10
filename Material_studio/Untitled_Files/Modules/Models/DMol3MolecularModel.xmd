@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="simulation" GUID="{971AE723-2B39-4277-8D5C-E8DCDA2EE239}">
+		<Name>DMol3 Molecular</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2004-10-28T17:06:27</DateCreated>
+		<DateModified>2004-10-28T17:06:27</DateModified>
+		<Note>A model to calculate molecular descriptors using DMol3</Note>
+	</BasicInformation>
+	<Inputs number="7">
+		<Input name="Task type" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Task</KeyName>
+			</Key>
+			<Value>Energy</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Energy" value="1"/>
+				<Item name="Geometry Optimization" value="2"/>
+			</Range>
+		</Input>
+		<Input name="Quality level" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Quality</KeyName>
+			</Key>
+			<Value>Medium</Value>
+			<Range type="enumeration" number="3">
+				<Item name="Coarse" value="1"/>
+				<Item name="Medium" value="2"/>
+				<Item name="Fine" value="3"/>
+			</Range>
+		</Input>
+		<Input name="Solvent" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Solvent</KeyName>
+			</Key>
+			<Value>None</Value>
+			<Range type="enumeration" number="17">
+				<Item name="Acetone" value="1"/>
+				<Item name="Acetonitrile" value="2"/>
+				<Item name="Benzene" value="3"/>
+				<Item name="Carbon tetrachloride" value="4"/>
+				<Item name="Chloroform" value="5"/>
+				<Item name="Diethyl ether" value="6"/>
+				<Item name="Dimethyl sulfoxide" value="7"/>
+				<Item name="Ethanol" value="8"/>
+				<Item name="Methanol" value="9"/>
+				<Item name="Methylene chloride" value="10"/>
+				<Item name="n-Hexane" value="11"/>
+				<Item name="n-Hexadecane" value="12"/>
+				<Item name="Nitrobenzene" value="13"/>
+				<Item name="Pyridine" value="14"/>
+				<Item name="Water" value="15"/>
+                                <Item name="None" value="16"/>
+				<Item name="Default" value="17"/>
+			</Range>
+		</Input>
+		<Input name="Functional" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Functional</KeyName>
+			</Key>
+			<Value>PWC</Value>
+			<Range type="enumeration" number="26">
+				<Item name="PWC" value="1"/>
+				<Item name="VWN" value="2"/>
+				<Item name="PW91" value="3"/>
+				<Item name="BP" value="4"/>
+				<Item name="PBE" value="5"/>
+				<Item name="BLYP" value="6"/>
+				<Item name="BOP" value="7"/>
+				<Item name="VWN-BP" value="8"/>
+				<Item name="RPBE" value="9"/>
+				<Item name="HCTH" value="10"/>
+				<Item name="B3LYP" value="11"/>
+				<Item name="PBESOL" value="12"/>
+				<Item name="M06-L" value="13"/>
+				<Item name="M11-L" value="14"/>
+				<Item name="MS0" value="15"/>
+				<Item name="MS1" value="16"/>
+				<Item name="MS2" value="17"/>
+				<Item name="revTPSS" value="18"/>
+				<Item name="TPSS" value="19"/>
+				<Item name="SCAN" value="20"/>
+				<Item name="HF" value="21"/>
+				<Item name="PBE0" value="22"/>
+				<Item name="TPSSh" value="23"/>
+				<Item name="SCAN0" value="24"/>
+				<Item name="M06" value="25"/>
+				<Item name="M06-2X" value="26"/>
+      </Range>
+		</Input>
+		<Input name="Charge" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Charge</KeyName>
+			</Key>
+			<Value>0.0</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="-1000.0"/>
+				<Item name="Max" value="1000.0"/>
+			</Range>
+		</Input>
+		<Input name="Multiplicity" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Multiplicity</KeyName>
+			</Key>
+			<Value>Spin restricted</Value>
+			<Range type="enumeration" number="10">
+				<Item name="Auto" value="1"/>
+				<Item name="Singlet" value="2"/>
+				<Item name="Doublet" value="3"/>
+				<Item name="Triplet" value="4"/>
+				<Item name="Quartet" value="5"/>
+				<Item name="Quintet" value="6"/>
+				<Item name="Sextet" value="7"/>
+				<Item name="Septet" value="8"/>
+				<Item name="Octet" value="9"/>
+				<Item name="Spin restricted" value="10"/>
+			</Range>
+		</Input>
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Molecular Structure</KeyName>
+			</Key>
+		</Input>
+	</Inputs>
+	<Outputs number="22">
+		<Output name="Structure" type="structure">
+			<Key>
+				<KeyName>Optimized Structure</KeyName>
+			</Key>
+		</Output>
+		<Output name="Total energy" type="energy">
+			<Key>
+				<KeyName>TOTAL ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Binding energy" type="energy">
+			<Key>
+				<KeyName>BINDING ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="HOMO energy" type="energy">
+			<Key>
+				<KeyName>HOMO ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="LUMO energy" type="energy">
+			<Key>
+				<KeyName>LUMO ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Total dipole" type="double">
+			<Key>
+				<KeyName>TOTAL DIPOLE</KeyName>
+			</Key>
+		</Output>
+		<OutputArray name="Dipole components" type="double">
+			<Key>
+				<KeyName>DIPOLE</KeyName>
+			</Key>
+			<OutputItems number="3">
+				<OutputItem>Dipole x</OutputItem>
+				<OutputItem>Dipole y</OutputItem>
+				<OutputItem>Dipole z</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<Output name="LUMO-HOMO energy" type="energy">
+			<Key>
+				<KeyName>LUMO-HOMO ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Zero point vibrational energy" type="energy">
+			<Key>
+				<KeyName>ZERO POINT VIB ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Charges (Mulliken)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>CHARGES MULLIKEN</KeyName>
+			</Key>
+		</Output>
+		<Output name="Charges (Hirshfeld)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>CHARGES HIRSHFELD</KeyName>
+			</Key>
+		</Output>
+		<Output name="Charges (ESP)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>CHARGES ESP</KeyName>
+			</Key>
+		</Output>
+		<Output name="Fukui indices (-) (Mulliken)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>FUKUI - MULLIKEN</KeyName>
+			</Key>
+		</Output>
+		<Output name="Fukui indices (0) (Mulliken)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>FUKUI 0 MULLIKEN</KeyName>
+			</Key>
+		</Output>
+		<Output name="Fukui indices (+) (Mulliken)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>FUKUI + MULLIKEN</KeyName>
+			</Key>
+		</Output>
+		<Output name="Fukui indices (-) (Hirshfeld)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>FUKUI - HIRSHFELD</KeyName>
+			</Key>
+		</Output>
+		<Output name="Fukui indices (0) (Hirshfeld)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>FUKUI 0 HIRSHFELD</KeyName>
+			</Key>
+		</Output>
+		<Output name="Fukui indices (+) (Hirshfeld)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>FUKUI + HIRSHFELD</KeyName>
+			</Key>
+		</Output>
+		<Output name="Dielectric energy" type="double">
+			<Key>
+				<KeyName>DIELECTRIC ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Solvation energy" type="double">
+			<Key>
+				<KeyName>SOLVATION ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Surface area" type="double">
+			<Key>
+				<KeyName>SURFACE AREA</KeyName>
+			</Key>
+		</Output>
+		<Output name="Cavity volume" type="double">
+			<Key>
+				<KeyName>CAVITY VOLUME</KeyName>
+			</Key>
+		</Output>
+		<OutputGroups number="6">
+			<OutputGroup name="Structure" category="Structure">
+				<OutputKey>Optimized Structure</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Energy" category="Energies">
+				<OutputKey>TOTAL ENERGY</OutputKey>
+				<OutputKey>BINDING ENERGY</OutputKey>
+				<OutputKey>HOMO ENERGY</OutputKey>
+				<OutputKey>LUMO ENERGY</OutputKey>
+				<OutputKey>LUMO-HOMO ENERGY</OutputKey>
+				<OutputKey defaultCalc="0">ZERO POINT VIB ENERGY</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Dipole" category="Multipoles">
+				<OutputKey>TOTAL DIPOLE</OutputKey>
+				<OutputKey>DIPOLE</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Atomic charges" category="Charges">
+				<OutputKey>CHARGES HIRSHFELD</OutputKey>
+				<OutputKey>CHARGES MULLIKEN</OutputKey>
+				<OutputKey>CHARGES ESP</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Fukui indices" category="Fukui indices">
+				<OutputKey>FUKUI + MULLIKEN</OutputKey>
+				<OutputKey>FUKUI 0 MULLIKEN</OutputKey>
+				<OutputKey>FUKUI - MULLIKEN</OutputKey>
+				<OutputKey>FUKUI + HIRSHFELD</OutputKey>
+				<OutputKey>FUKUI 0 HIRSHFELD</OutputKey>
+				<OutputKey>FUKUI - HIRSHFELD</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="COSMO energy" category="Cosmo energy">
+				<OutputKey>DIELECTRIC ENERGY</OutputKey>
+                		<OutputKey>SOLVATION ENERGY</OutputKey>
+				<OutputKey>SURFACE AREA</OutputKey>
+				<OutputKey>CAVITY VOLUME</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineDMol3" engineName="DMol3"/>
+	</Relationship>
+</PredictiveModel>

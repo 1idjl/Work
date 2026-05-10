@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="simulation" GUID="{5F0C0C52-7DAF-4382-978A-A0DAD104A543}">
+		<Name>DMol3 Periodic</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2004-10-28T17:06:27</DateCreated>
+		<DateModified>2004-10-28T17:06:27</DateModified>
+		<Note>A model to calculate periodic descriptors using DMol3</Note>
+	</BasicInformation>
+	<Inputs number="7">
+		<Input name="Task type" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Task</KeyName>
+			</Key>
+			<Value>Energy</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Energy" value="1"/>
+				<Item name="Geometry Optimization" value="2"/>
+			</Range>
+		</Input>
+		<Input name="Quality level" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Quality</KeyName>
+			</Key>
+			<Value>Medium</Value>
+			<Range type="enumeration" number="3">
+				<Item name="Coarse" value="1"/>
+				<Item name="Medium" value="2"/>
+				<Item name="Fine" value="3"/>
+			</Range>
+		</Input>
+		<Input name="Functional" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Functional</KeyName>
+			</Key>
+			<Value>PWC</Value>
+			<Range type="enumeration" number="19">
+				<Item name="PWC" value="1"/>
+				<Item name="VWN" value="2"/>
+				<Item name="PW91" value="3"/>
+				<Item name="BP" value="4"/>
+				<Item name="PBE" value="5"/>
+				<Item name="BLYP" value="6"/>
+				<Item name="BOP" value="7"/>
+				<Item name="VWN-BP" value="8"/>
+				<Item name="RPBE" value="9"/>
+				<Item name="HCTH" value="10"/>
+        <Item name="PBESOL" value="11"/>
+        <Item name="M06-L" value="12"/>
+        <Item name="M11-L" value="13"/>
+        <Item name="MS0" value="14"/>
+        <Item name="MS1" value="15"/>
+        <Item name="MS2" value="16"/>
+        <Item name="revTPSS" value="17"/>
+        <Item name="TPSS" value="18"/>
+        <Item name="SCAN" value="19"/>
+      </Range>
+		</Input>
+		<Input name="Charge" type="double" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Charge</KeyName>
+			</Key>
+			<Value>0.0</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Min" value="-1000.0"/>
+				<Item name="Max" value="1000.0"/>
+			</Range>
+		</Input>
+		<Input name="Multiplicity" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>Multiplicity</KeyName>
+			</Key>
+			<Value>Spin restricted</Value>
+			<Range type="enumeration" number="10">
+				<Item name="Auto" value="1"/>
+				<Item name="Singlet" value="2"/>
+				<Item name="Doublet" value="3"/>
+				<Item name="Triplet" value="4"/>
+				<Item name="Quartet" value="5"/>
+				<Item name="Quintet" value="6"/>
+				<Item name="Sextet" value="7"/>
+				<Item name="Septet" value="8"/>
+				<Item name="Octet" value="9"/>
+				<Item name="Spin restricted" value="10"/>
+			</Range>
+		</Input>
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Periodic Structure</KeyName>
+			</Key>
+		</Input>
+		<Input name="System type" type="enumeration" role="Parameter" permittedRoles="Parameter">
+			<Key>
+				<KeyName>System</KeyName>
+			</Key>
+			<Value>Insulator</Value>
+			<Range type="enumeration" number="2">
+				<Item name="Insulator" value="1"/>
+				<Item name="Metallic" value="2"/>
+			</Range>
+		</Input>
+	</Inputs>
+	<Outputs number="6">
+		<Output name="Structure" type="structure">
+			<Key>
+				<KeyName>Optimized Structure</KeyName>
+			</Key>
+		</Output>
+		<Output name="Total energy" type="energy">
+			<Key>
+				<KeyName>TOTAL ENERGY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Band gap" type="energy">
+			<Key>
+				<KeyName>BAND GAP</KeyName>
+			</Key>
+		</Output>
+		<Output name="Charges (Mulliken)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>CHARGES MULLIKEN</KeyName>
+			</Key>
+		</Output>
+		<Output name="Charges (Hirshfeld)" type="double" isArrayType="true">
+			<Key>
+				<KeyName>CHARGES HIRSHFELD</KeyName>
+			</Key>
+		</Output>
+		<OutputArray name="Density of states at Fermi level" type="double">
+			<Key>
+				<KeyName>DENSITY OF STATES</KeyName>
+			</Key>
+			<OutputItems number="2">
+				<OutputItem>Density of states at Fermi level (alpha)</OutputItem>
+				<OutputItem>Density of states at Fermi level (beta)</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputGroups number="4">
+			<OutputGroup name="Structure" category="Structure">
+				<OutputKey>Optimized Structure</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Energy" category="Energies">
+				<OutputKey>TOTAL ENERGY</OutputKey>
+				<OutputKey>BAND GAP</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Atomic charges" category="Charges">
+				<OutputKey>CHARGES HIRSHFELD</OutputKey>
+				<OutputKey>CHARGES MULLIKEN</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Density of states" category="Density of states">
+				<OutputKey>DENSITY OF STATES</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineDMol3" engineName="DMol3"/>
+	</Relationship>
+</PredictiveModel>

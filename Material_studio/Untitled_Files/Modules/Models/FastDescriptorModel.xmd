@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="latin1"?>
+<PredictiveModel>
+	<BasicInformation type="descriptor" GUID="{B776DF7F-C5D9-45A2-AE0E-5E0DE7BEDF2E}">
+		<Name>Fast Descriptors</Name>
+		<Author>BIOVIA</Author>
+		<DateCreated>2003-09-25T17:19:52</DateCreated>
+		<DateModified>2003-09-25T17:19:52</DateModified>
+		<Note>Fast Descriptor Models</Note>
+	</BasicInformation>
+	<Inputs number="1">
+		<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+			<Key>
+				<KeyName>Structure</KeyName>
+			</Key>
+			<GUID></GUID>
+		</Input>
+	</Inputs>
+	<Outputs number="37">
+		<Output name="Rotatable bonds" type="count">
+			<Key>
+				<KeyName>Rotlbonds</KeyName>
+			</Key>
+		</Output>
+		<Output name="Hydrogen bond donor" type="count">
+			<Key>
+				<KeyName>Hbond donor</KeyName>
+			</Key>
+		</Output>
+		<Output name="Hydrogen bond acceptor" type="count">
+			<Key>
+				<KeyName>Hbond acceptor</KeyName>
+			</Key>
+		</Output>
+		<Output name="Chiral centers" type="count">
+			<Key>
+				<KeyName>Chiral centers</KeyName>
+			</Key>
+		</Output>
+		<Output name="AlogP" type="double">
+			<Key>
+				<KeyName>AlogP</KeyName>
+			</Key>
+		</Output>
+		<Output name="AlogP98" type="double">
+			<Key>
+				<KeyName>AlogP98</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular refractivity" type="double">
+			<Key>
+				<KeyName>MolRef</KeyName>
+			</Key>
+		</Output>
+		<Output name="Molecular flexibility" type="double">
+			<Key>
+				<KeyName>PHI</KeyName>
+			</Key>
+		</Output>
+		<Output name="Balaban index JX" type="double">
+			<Key>
+				<KeyName>JX</KeyName>
+			</Key>
+		</Output>
+		<Output name="Balaban index JY" type="double">
+			<Key>
+				<KeyName>JY</KeyName>
+			</Key>
+		</Output>
+		<Output name="Wiener index" type="long">
+			<Key>
+				<KeyName>Wiener</KeyName>
+			</Key>
+		</Output>
+		<Output name="Zagreb index" type="long">
+			<Key>
+				<KeyName>Zagreb</KeyName>
+			</Key>
+		</Output>
+		<OutputArray name="Kappa indices" type="double">
+			<Key>
+				<KeyName>KAPPA</KeyName>
+			</Key>
+			<OutputItems number="3">
+				<OutputItem>Kappa-1</OutputItem>
+				<OutputItem>Kappa-2</OutputItem>
+				<OutputItem>Kappa-3</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="Kappa indices (alpha modified)" type="double">
+			<Key>
+				<KeyName>KAPPA-AM</KeyName>
+			</Key>
+			<OutputItems number="3">
+				<OutputItem>Kappa-1 (alpha modified)</OutputItem>
+				<OutputItem>Kappa-2 (alpha modified)</OutputItem>
+				<OutputItem>Kappa-3 (alpha modified)</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="Subgraph counts (0-3)" type="count" unit="unknown">
+			<Key>
+				<KeyName>SC03</KeyName>
+			</Key>
+			<OutputItems number="6">
+				<OutputItem>Subgraph counts (0): path</OutputItem>
+				<OutputItem>Subgraph counts (1): path</OutputItem>
+				<OutputItem>Subgraph counts (2): path</OutputItem>
+				<OutputItem>Subgraph counts (3): path</OutputItem>
+				<OutputItem>Subgraph counts (3): cluster</OutputItem>
+				<OutputItem>Subgraph counts (3): chain</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="Subgraph counts (4-6)" type="count" unit="unknown">
+			<Key>
+				<KeyName>SC46</KeyName>
+			</Key>
+			<OutputItems number="12">
+				<OutputItem>Subgraph counts (4): path</OutputItem>
+				<OutputItem>Subgraph counts (4): cluster</OutputItem>
+				<OutputItem>Subgraph counts (4): path/cluster</OutputItem>
+				<OutputItem>Subgraph counts (4): chain</OutputItem>
+				<OutputItem>Subgraph counts (5): path</OutputItem>
+				<OutputItem>Subgraph counts (5): cluster</OutputItem>
+				<OutputItem>Subgraph counts (5): path/cluster</OutputItem>
+				<OutputItem>Subgraph counts (5): chain</OutputItem>
+				<OutputItem>Subgraph counts (6): path</OutputItem>
+				<OutputItem>Subgraph counts (6): cluster</OutputItem>
+				<OutputItem>Subgraph counts (6): path/cluster</OutputItem>
+				<OutputItem>Subgraph counts (6): chain</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="Chi indices (0-3)" type="double">
+			<Key>
+				<KeyName>CHI03</KeyName>
+			</Key>
+			<OutputItems number="6">
+				<OutputItem>Chi (0)</OutputItem>
+				<OutputItem>Chi (1)</OutputItem>
+				<OutputItem>Chi (2)</OutputItem>
+				<OutputItem>Chi (3): path</OutputItem>
+				<OutputItem>Chi (3): cluster</OutputItem>
+				<OutputItem>Chi (3): chain</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="Chi indices (4-6)" type="double">
+			<Key>
+				<KeyName>CHI46</KeyName>
+			</Key>
+			<OutputItems number="12">
+				<OutputItem>Chi (4): path</OutputItem>
+				<OutputItem>Chi (4): cluster</OutputItem>
+				<OutputItem>Chi (4): path/cluster</OutputItem>
+				<OutputItem>Chi (4): chain</OutputItem>
+				<OutputItem>Chi (5): path</OutputItem>
+				<OutputItem>Chi (5): cluster</OutputItem>
+				<OutputItem>Chi (5): path/cluster</OutputItem>
+				<OutputItem>Chi (5): chain</OutputItem>
+				<OutputItem>Chi (6): path</OutputItem>
+				<OutputItem>Chi (6): cluster</OutputItem>
+				<OutputItem>Chi (6): path/cluster</OutputItem>
+				<OutputItem>Chi (6): chain</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="Chi indices (0-3) (valence modified)" type="double">
+			<Key>
+				<KeyName>CHIV03</KeyName>
+			</Key>
+			<OutputItems number="6">
+				<OutputItem>Chi (0) (valence modified)</OutputItem>
+				<OutputItem>Chi (1) (valence modified)</OutputItem>
+				<OutputItem>Chi (2) (valence modified)</OutputItem>
+				<OutputItem>Chi (3): path (valence modified)</OutputItem>
+				<OutputItem>Chi (3): cluster (valence modified)</OutputItem>
+				<OutputItem>Chi (3): chain (valence modified)</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="Chi indices (4-6) (valence modified)" type="double">
+			<Key>
+				<KeyName>CHIV46</KeyName>
+			</Key>
+			<OutputItems number="12">
+				<OutputItem>Chi (4): path (valence modified)</OutputItem>
+				<OutputItem>Chi (4): cluster (valence modified)</OutputItem>
+				<OutputItem>Chi (4): path/cluster (valence modified)</OutputItem>
+				<OutputItem>Chi (4): chain (valence modified)</OutputItem>
+				<OutputItem>Chi (5): path (valence modified)</OutputItem>
+				<OutputItem>Chi (5): cluster (valence modified)</OutputItem>
+				<OutputItem>Chi (5): path/cluster (valence modified)</OutputItem>
+				<OutputItem>Chi (5): chain (valence modified)</OutputItem>
+				<OutputItem>Chi (6): path (valence modified)</OutputItem>
+				<OutputItem>Chi (6): cluster (valence modified)</OutputItem>
+				<OutputItem>Chi (6): path/cluster (valence modified)</OutputItem>
+				<OutputItem>Chi (6): chain (valence modified)</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<Output name="Information content (IC)" type="double">
+			<Key>
+				<KeyName>IC</KeyName>
+			</Key>
+		</Output>
+		<Output name="Bond information content (BIC)" type="double">
+			<Key>
+				<KeyName>BIC</KeyName>
+			</Key>
+		</Output>
+		<Output name="Complementary information content (CIC)" type="double">
+			<Key>
+				<KeyName>CIC</KeyName>
+			</Key>
+		</Output>
+		<Output name="Structural information content (SIC)" type="double">
+			<Key>
+				<KeyName>SIC</KeyName>
+			</Key>
+		</Output>
+		<Output name="Edge adjacency/equality" type="double">
+			<Key>
+				<KeyName>E-ADJ-equ</KeyName>
+			</Key>
+		</Output>
+		<Output name="Edge adjacency/magnitude" type="double">
+			<Key>
+				<KeyName>E-ADJ-mag</KeyName>
+			</Key>
+		</Output>
+		<Output name="Edge distance/equality" type="double">
+			<Key>
+				<KeyName>E-DIST-equ</KeyName>
+			</Key>
+		</Output>
+		<Output name="Edge distance/magnitude" type="double">
+			<Key>
+				<KeyName>E-DIST-mag</KeyName>
+			</Key>
+		</Output>
+		<Output name="Vertex adjacency/equality" type="double">
+			<Key>
+				<KeyName>V-ADJ-equ</KeyName>
+			</Key>
+		</Output>
+		<Output name="Vertex adjacency/magnitude" type="double">
+			<Key>
+				<KeyName>V-ADJ-mag</KeyName>
+			</Key>
+		</Output>
+		<Output name="Vertex distance/equality" type="double">
+			<Key>
+				<KeyName>V-DIST-equ</KeyName>
+			</Key>
+		</Output>
+		<Output name="Vertex distance/magnitude" type="double">
+			<Key>
+				<KeyName>V-DIST-mag</KeyName>
+			</Key>
+		</Output>
+		<Output name="Atomic composition (total)" type="double">
+			<Key>
+				<KeyName>IAC-Total</KeyName>
+			</Key>
+		</Output>
+		<Output name="Atomic composition (mean)" type="double">
+			<Key>
+				<KeyName>IAC-Mean</KeyName>
+			</Key>
+		</Output>
+		<OutputArray name="E-state keys (sums)" type="double">
+			<Key>
+				<KeyName>ESUMS</KeyName>
+			</Key>
+			<OutputItems number="79">
+				<OutputItem>E-state keys (sums): S_sCH3</OutputItem>
+				<OutputItem>E-state keys (sums): S_dCH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssCH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_tCH</OutputItem>
+				<OutputItem>E-state keys (sums): S_dsCH</OutputItem>
+				<OutputItem>E-state keys (sums): S_aaCH</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssCH</OutputItem>
+				<OutputItem>E-state keys (sums): S_ddC</OutputItem>
+				<OutputItem>E-state keys (sums): S_tsC </OutputItem>
+				<OutputItem>E-state keys (sums): S_dssC</OutputItem>
+				<OutputItem>E-state keys (sums): S_aasC</OutputItem>
+				<OutputItem>E-state keys (sums): S_aaaC</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssssC</OutputItem>
+				<OutputItem>E-state keys (sums): S_sNH3</OutputItem>
+				<OutputItem>E-state keys (sums): S_sNH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssNH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_dNH </OutputItem>
+				<OutputItem>E-state keys (sums): S_ssNH</OutputItem>
+				<OutputItem>E-state keys (sums): S_aaNH</OutputItem>
+				<OutputItem>E-state keys (sums): S_tN</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssNH</OutputItem>
+				<OutputItem>E-state keys (sums): S_dsN</OutputItem>
+				<OutputItem>E-state keys (sums): S_aaN</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssN</OutputItem>
+				<OutputItem>E-state keys (sums): S_ddsN</OutputItem>
+				<OutputItem>E-state keys (sums): S_aasN</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssssN</OutputItem>
+				<OutputItem>E-state keys (sums): S_sOH</OutputItem>
+				<OutputItem>E-state keys (sums): S_dO</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssO</OutputItem>
+				<OutputItem>E-state keys (sums): S_aaO</OutputItem>
+				<OutputItem>E-state keys (sums): S_sSH</OutputItem>
+				<OutputItem>E-state keys (sums): S_dS</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssS</OutputItem>
+				<OutputItem>E-state keys (sums): S_aaS</OutputItem>
+				<OutputItem>E-state keys (sums): S_dssS</OutputItem>
+				<OutputItem>E-state keys (sums): S_ddssS</OutputItem>
+				<OutputItem>E-state keys (sums): S_sPH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssPH</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssP</OutputItem>
+				<OutputItem>E-state keys (sums): S_dsssP</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssssP</OutputItem>
+				<OutputItem>E-state keys (sums): S_sF</OutputItem>
+				<OutputItem>E-state keys (sums): S_sCl</OutputItem>
+				<OutputItem>E-state keys (sums): S_sBr</OutputItem>
+				<OutputItem>E-state keys (sums): S_sI</OutputItem>
+				<OutputItem>E-state keys (sums): S_sLi</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssBe</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssssBe</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssBH</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssB</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssssB</OutputItem>
+				<OutputItem>E-state keys (sums): S_sSiH3</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssSiH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssSiH</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssssSi</OutputItem>
+				<OutputItem>E-state keys (sums): S_sGeH3</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssGeH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssGeH</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssssGe</OutputItem>
+				<OutputItem>E-state keys (sums): S_sAsH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssAsH</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssAs</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssdAs</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssssAs</OutputItem>
+				<OutputItem>E-state keys (sums): S_sSeH</OutputItem>
+				<OutputItem>E-state keys (sums): S_dSe</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssSe</OutputItem>
+				<OutputItem>E-state keys (sums): S_aaSe</OutputItem>
+				<OutputItem>E-state keys (sums): S_dssSe</OutputItem>
+				<OutputItem>E-state keys (sums): S_ddssSe</OutputItem>
+				<OutputItem>E-state keys (sums): S_sSnH3</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssSnH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssSnH</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssssSn</OutputItem>
+				<OutputItem>E-state keys (sums): S_sPbH3</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssPbH2</OutputItem>
+				<OutputItem>E-state keys (sums): S_sssPbH</OutputItem>
+				<OutputItem>E-state keys (sums): S_ssssPb</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="E-state keys (counts)" type="count">
+			<Key>
+				<KeyName>ECOUNT</KeyName>
+			</Key>
+			<OutputItems number="79">
+				<OutputItem>E-state keys (counts): N_sCH3 </OutputItem>
+				<OutputItem>E-state keys (counts): N_dCH2 </OutputItem>
+				<OutputItem>E-state keys (counts): N_ssCH2</OutputItem>
+				<OutputItem>E-state keys (counts): N_tCH</OutputItem>
+				<OutputItem>E-state keys (counts): N_dsCH</OutputItem>
+				<OutputItem>E-state keys (counts): N_aaCH</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssCH</OutputItem>
+				<OutputItem>E-state keys (counts): N_ddC</OutputItem>
+				<OutputItem>E-state keys (counts): N_tsC </OutputItem>
+				<OutputItem>E-state keys (counts): N_dssC</OutputItem>
+				<OutputItem>E-state keys (counts): N_aasC</OutputItem>
+				<OutputItem>E-state keys (counts): N_aaaC</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssssC</OutputItem>
+				<OutputItem>E-state keys (counts): N_sNH3</OutputItem>
+				<OutputItem>E-state keys (counts): N_sNH2</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssNH2</OutputItem>
+				<OutputItem>E-state keys (counts): N_dNH </OutputItem>
+				<OutputItem>E-state keys (counts): N_ssNH</OutputItem>
+				<OutputItem>E-state keys (counts): N_aaNH</OutputItem>
+				<OutputItem>E-state keys (counts): N_tN</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssNH</OutputItem>
+				<OutputItem>E-state keys (counts): N_dsN</OutputItem>
+				<OutputItem>E-state keys (counts): N_aaN</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssN</OutputItem>
+				<OutputItem>E-state keys (counts): N_ddsN</OutputItem>
+				<OutputItem>E-state keys (counts): N_aasN</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssssN</OutputItem>
+				<OutputItem>E-state keys (counts): N_sOH</OutputItem>
+				<OutputItem>E-state keys (counts): N_dO</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssO</OutputItem>
+				<OutputItem>E-state keys (counts): N_aaO</OutputItem>
+				<OutputItem>E-state keys (counts): N_sSH</OutputItem>
+				<OutputItem>E-state keys (counts): N_dS</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssS</OutputItem>
+				<OutputItem>E-state keys (counts): N_aaS</OutputItem>
+				<OutputItem>E-state keys (counts): N_dssS</OutputItem>
+				<OutputItem>E-state keys (counts): N_ddssS</OutputItem>
+				<OutputItem>E-state keys (counts): N_sPH2</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssPH</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssP</OutputItem>
+				<OutputItem>E-state keys (counts): N_dsssP</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssssP</OutputItem>
+				<OutputItem>E-state keys (counts): N_sF</OutputItem>
+				<OutputItem>E-state keys (counts): N_sCl</OutputItem>
+				<OutputItem>E-state keys (counts): N_sBr</OutputItem>
+				<OutputItem>E-state keys (counts): N_sI</OutputItem>
+				<OutputItem>E-state keys (counts): N_sLi</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssBe</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssssBe</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssBH</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssB</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssssB</OutputItem>
+				<OutputItem>E-state keys (counts): N_sSiH3</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssSiH2</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssSiH</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssssSi</OutputItem>
+				<OutputItem>E-state keys (counts): N_sGeH3</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssGeH2</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssGeH</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssssGe</OutputItem>
+				<OutputItem>E-state keys (counts): N_sAsH2</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssAsH</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssAs</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssdAs</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssssAs</OutputItem>
+				<OutputItem>E-state keys (counts): N_sSeH</OutputItem>
+				<OutputItem>E-state keys (counts): N_dSe</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssSe</OutputItem>
+				<OutputItem>E-state keys (counts): N_aaSe</OutputItem>
+				<OutputItem>E-state keys (counts): N_dssSe</OutputItem>
+				<OutputItem>E-state keys (counts): N_ddssSe</OutputItem>
+				<OutputItem>E-state keys (counts): N_sSnH3</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssSnH2</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssSnH</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssssSn</OutputItem>
+				<OutputItem>E-state keys (counts): N_sPbH3</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssPbH2</OutputItem>
+				<OutputItem>E-state keys (counts): N_sssPbH</OutputItem>
+				<OutputItem>E-state keys (counts): N_ssssPb</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputArray name="E-state keys (indicators)" type="long">
+			<Key>
+				<KeyName>EIND</KeyName>
+			</Key>
+			<OutputItems number="79">
+				<OutputItem>E-state keys (indicators): I_sCH3 </OutputItem>
+				<OutputItem>E-state keys (indicators): I_dCH2 </OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssCH2</OutputItem>
+				<OutputItem>E-state keys (indicators): I_tCH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_dsCH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_aaCH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssCH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ddC</OutputItem>
+				<OutputItem>E-state keys (indicators): I_tsC </OutputItem>
+				<OutputItem>E-state keys (indicators): I_dssC</OutputItem>
+				<OutputItem>E-state keys (indicators): I_aasC</OutputItem>
+				<OutputItem>E-state keys (indicators): I_aaaC</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssssC</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sNH3</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sNH2</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssNH2</OutputItem>
+				<OutputItem>E-state keys (indicators): I_dNH </OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssNH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_aaNH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_tN</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssNH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_dsN</OutputItem>
+				<OutputItem>E-state keys (indicators): I_aaN</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssN</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ddsN</OutputItem>
+				<OutputItem>E-state keys (indicators): I_aasN</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssssN</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sOH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_dO</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssO</OutputItem>
+				<OutputItem>E-state keys (indicators): I_aaO</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sSH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_dS</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssS</OutputItem>
+				<OutputItem>E-state keys (indicators): I_aaS</OutputItem>
+				<OutputItem>E-state keys (indicators): I_dssS</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ddssS</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sPH2</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssPH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssP</OutputItem>
+				<OutputItem>E-state keys (indicators): I_dsssP</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssssP</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sF</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sCl</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sBr</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sI</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sLi</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssBe</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssssBe</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssBH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssB</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssssB</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sSiH3</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssSiH2</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssSiH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssssSi</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sGeH3</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssGeH2</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssGeH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssssGe</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sAsH2</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssAsH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssAs</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssdAs</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssssAs</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sSeH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_dSe</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssSe</OutputItem>
+				<OutputItem>E-state keys (indicators): I_aaSe</OutputItem>
+				<OutputItem>E-state keys (indicators): I_dssSe</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ddssSe</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sSnH3</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssSnH2</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssSnH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssssSn</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sPbH3</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssPbH2</OutputItem>
+				<OutputItem>E-state keys (indicators): I_sssPbH</OutputItem>
+				<OutputItem>E-state keys (indicators): I_ssssPb</OutputItem>
+			</OutputItems>
+		</OutputArray>
+		<OutputGroups number="17">
+			<OutputGroup name="Rotatable bonds" category="Structural">
+				<OutputKey>Rotlbonds</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Hydrogen bond donor" category="Structural">
+				<OutputKey>Hbond donor</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Hydrogen bond acceptor" category="Structural">
+				<OutputKey>Hbond acceptor</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Chiral centers" category="Structural">
+				<OutputKey>Chiral centers</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="AlogP" category="Thermodynamic">
+				<OutputKey>AlogP</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="AlogP98" category="Thermodynamic">
+				<OutputKey>AlogP98</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Molecular refractivity" category="Thermodynamic">
+				<OutputKey>MolRef</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Molecular flexibility" category="Topological">
+				<OutputKey>PHI</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Balaban indices" category="Topological">
+				<OutputKey>JX</OutputKey>
+				<OutputKey>JY</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Wiener index" category="Topological">
+				<OutputKey>Wiener</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Zagreb index" category="Topological">
+				<OutputKey>Zagreb</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Kappa indices" category="Topological">
+				<OutputKey>KAPPA</OutputKey>
+				<OutputKey>KAPPA-AM</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Subgraph counts" category="Topological">
+				<OutputKey>SC03</OutputKey>
+				<OutputKey defaultCalc="0">SC46</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Chi indices" category="Topological">
+				<OutputKey>CHI03</OutputKey>
+				<OutputKey defaultCalc="0">CHI46</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Valence modified chi indices" category="Topological">
+				<OutputKey>CHIV03</OutputKey>
+				<OutputKey defaultCalc="0">CHIV46</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="Information content" category="Information">
+				<OutputKey>IC</OutputKey>
+				<OutputKey>BIC</OutputKey>
+				<OutputKey>CIC</OutputKey>
+				<OutputKey>SIC</OutputKey>
+				<OutputKey defaultCalc="0">E-ADJ-equ</OutputKey>
+				<OutputKey>E-ADJ-mag</OutputKey>
+				<OutputKey defaultCalc="0">E-DIST-equ</OutputKey>
+				<OutputKey>E-DIST-mag</OutputKey>
+				<OutputKey>V-ADJ-equ</OutputKey>
+				<OutputKey>V-ADJ-mag</OutputKey>
+				<OutputKey>V-DIST-equ</OutputKey>
+				<OutputKey>V-DIST-mag</OutputKey>
+				<OutputKey>IAC-Total</OutputKey>
+				<OutputKey defaultCalc="0">IAC-Mean</OutputKey>
+			</OutputGroup>
+			<OutputGroup name="E-state keys" category="E-state keys">
+				<OutputKey>ESUMS</OutputKey>
+				<OutputKey defaultCalc="0">ECOUNT</OutputKey>
+				<OutputKey defaultCalc="0">EIND</OutputKey>
+			</OutputGroup>
+		</OutputGroups>
+	</Outputs>
+	<Relationship>
+		<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineFastDescriptor" engineName="Fast Descriptors"/>
+	</Relationship>
+</PredictiveModel>
