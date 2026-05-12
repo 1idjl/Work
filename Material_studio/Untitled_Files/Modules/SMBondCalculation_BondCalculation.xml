@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="latin1"?>
+<EXTENSION VERSION="24.1">
+<LOGICS>
+<LOGICITEM NAME="AutoBondRecalculation">
+	<STATE NAME="AutoBondRecalculation" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="AutoBondRecalculation1">
+	<STATE NAME="AutoBondRecalculation" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="AutoCloseContactRecalculation">
+	<STATE NAME="AutoBondRecalculation" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="AutoHBondRecalculation">
+	<STATE NAME="AutoBondRecalculation" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="BondCalculation">
+	<STATE NAME="Bond Calculation" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="BondCriteria">
+	<STATE NAME="Bond Scheme No sf-Shell" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="ToleranceMaxFac">
+	<VALUE>2.</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="ToleranceMinFac">
+	<VALUE>0.64</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="AtomExclusionList">
+	<VALUE>
+	<ITEM>7</ITEM>
+	<ITEM>14</ITEM>
+	</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="CalcConnectivity">
+	<VALUE>1</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="CalcBondType">
+	<VALUE>1</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="ConvertRepresentation">
+	<VALUE>true</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="BondScriptCriteria">
+	<STATE NAME="Bond Scheme No sf-Shell" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="CloseContactCalculation">
+	<STATE NAME="Bond Calculation" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="CloseContactCriteria">
+	<STATE NAME="Close Contact Criteria" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="CloseContactScriptCriteria">
+	<STATE NAME="Close Contact Criteria" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="CrystalGraphCalculation">
+	<STATE NAME="Bond Calculation" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="CrystalGraphCriteria">
+	<STATE NAME="Crystal Graph Criteria" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="CrystalGraphScriptCriteria">
+	<STATE NAME="Crystal Graph Criteria" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="HBondCalculation">
+	<STATE NAME="Bond Calculation" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="HBondCriteria">
+	<STATE NAME="H-Bond Scheme ONS + Halogens" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="HBondScriptCriteria">
+	<STATE NAME="H-Bond Scheme ONS + Halogens" VERSION="24.1">
+	<PROPERTIES>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="SchemeList">
+	<STATE NAME="Scheme List" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="ListStateID">
+	<VALUE>SMBondCalculation.BondCriteriaState</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="SchemeList">
+	<VALUE>
+	<ITEM>SMBondCalculation.BondCriteriaState
+		<STATE NAME="Bond Scheme No sf-Shell" VERSION="24.1">
+		<PROPERTIES>
+		<PROPERTY NAME="AtomExclusionList">
+		<VALUE>
+		<ITEM>3</ITEM>
+		<ITEM>11</ITEM>
+		<ITEM>19</ITEM>
+		<ITEM>37</ITEM>
+		<ITEM>55</ITEM>
+		<ITEM>87</ITEM>
+		<ITEM>4</ITEM>
+		<ITEM>12</ITEM>
+		<ITEM>20</ITEM>
+		<ITEM>38</ITEM>
+		<ITEM>56</ITEM>
+		<ITEM>88</ITEM>
+		<ITEM>57</ITEM>
+		<ITEM>58</ITEM>
+		<ITEM>59</ITEM>
+		<ITEM>60</ITEM>
+		<ITEM>61</ITEM>
+		<ITEM>62</ITEM>
+		<ITEM>63</ITEM>
+		<ITEM>64</ITEM>
+		<ITEM>65</ITEM>
+		<ITEM>66</ITEM>
+		<ITEM>67</ITEM>
+		<ITEM>68</ITEM>
+		<ITEM>69</ITEM>
+		<ITEM>70</ITEM>
+		<ITEM>89</ITEM>
+		<ITEM>90</ITEM>
+		<ITEM>91</ITEM>
+		<ITEM>92</ITEM>
+		<ITEM>93</ITEM>
+		<ITEM>94</ITEM>
+		<ITEM>95</ITEM>
+		<ITEM>96</ITEM>
+		<ITEM>97</ITEM>
+		<ITEM>98</ITEM>
+		<ITEM>99</ITEM>
+		<ITEM>100</ITEM>
+		<ITEM>101</ITEM>
+		<ITEM>102</ITEM>
+		</VALUE>
+		</PROPERTY>
+		</PROPERTIES>
+		</STATE>
+	</ITEM>
+	<ITEM>SMBondCalculation.BondCriteriaState
+		<STATE NAME="Bond Scheme No sf-Shell" VERSION="24.1">
+		<PROPERTIES>
+		<PROPERTY NAME="AtomExclusionList">
+		<VALUE>
+		<ITEM>3</ITEM>
+		<ITEM>11</ITEM>
+		<ITEM>19</ITEM>
+		<ITEM>37</ITEM>
+		<ITEM>55</ITEM>
+		<ITEM>87</ITEM>
+		<ITEM>4</ITEM>
+		<ITEM>12</ITEM>
+		<ITEM>20</ITEM>
+		<ITEM>38</ITEM>
+		<ITEM>56</ITEM>
+		<ITEM>88</ITEM>
+		<ITEM>57</ITEM>
+		<ITEM>58</ITEM>
+		<ITEM>59</ITEM>
+		<ITEM>60</ITEM>
+		<ITEM>61</ITEM>
+		<ITEM>62</ITEM>
+		<ITEM>63</ITEM>
+		<ITEM>64</ITEM>
+		<ITEM>65</ITEM>
+		<ITEM>66</ITEM>
+		<ITEM>67</ITEM>
+		<ITEM>68</ITEM>
+		<ITEM>69</ITEM>
+		<ITEM>70</ITEM>
+		<ITEM>89</ITEM>
+		<ITEM>90</ITEM>
+		<ITEM>91</ITEM>
+		<ITEM>92</ITEM>
+		<ITEM>93</ITEM>
+		<ITEM>94</ITEM>
+		<ITEM>95</ITEM>
+		<ITEM>96</ITEM>
+		<ITEM>97</ITEM>
+		<ITEM>98</ITEM>
+		<ITEM>99</ITEM>
+		<ITEM>100</ITEM>
+		<ITEM>101</ITEM>
+		<ITEM>102</ITEM>
+		<ITEM>21</ITEM>
+		<ITEM>22</ITEM>
+		<ITEM>23</ITEM>
+		<ITEM>24</ITEM>
+		<ITEM>25</ITEM>
+		<ITEM>26</ITEM>
+		<ITEM>27</ITEM>
+		<ITEM>28</ITEM>
+		<ITEM>29</ITEM>
+		<ITEM>39</ITEM>
+		<ITEM>40</ITEM>
+		<ITEM>41</ITEM>
+		<ITEM>42</ITEM>
+		<ITEM>43</ITEM>
+		<ITEM>44</ITEM>
+		<ITEM>45</ITEM>
+		<ITEM>46</ITEM>
+		<ITEM>47</ITEM>
+		<ITEM>71</ITEM>
+		<ITEM>72</ITEM>
+		<ITEM>73</ITEM>
+		<ITEM>74</ITEM>
+		<ITEM>75</ITEM>
+		<ITEM>76</ITEM>
+		<ITEM>77</ITEM>
+		<ITEM>78</ITEM>
+		<ITEM>79</ITEM>
+		</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="SchemeName">
+		<VALUE>No bonding to d-shell</VALUE>
+		</PROPERTY>
+		</PROPERTIES>
+		</STATE>
+	</ITEM>
+	<ITEM>SMBondCalculation.BondCriteriaState
+		<STATE NAME="Bond Scheme No sf-Shell" VERSION="24.1">
+		<PROPERTIES>
+		<PROPERTY NAME="AtomExclusionList">
+		<VALUE>
+		<ITEM>0</ITEM>
+		</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="SchemeName">
+		<VALUE>Include All Elements</VALUE>
+		</PROPERTY>
+		</PROPERTIES>
+		</STATE>
+	</ITEM>
+	<ITEM>SMBondCalculation.BondCriteriaState
+		<STATE NAME="Bond Scheme No sf-Shell" VERSION="24.1">
+		<PROPERTIES>
+		<PROPERTY NAME="ToleranceMaxFac">
+		<VALUE>1.5</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="AtomExclusionList">
+		<VALUE>
+		<ITEM>8</ITEM>
+		<ITEM>16</ITEM>
+		</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="CalcBondType">
+		<VALUE>0</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="ConvertRepresentation">
+		<VALUE>false</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="SchemeName">
+		<VALUE>Tetrahedral</VALUE>
+		</PROPERTY>
+		</PROPERTIES>
+		</STATE>
+	</ITEM>
+	<ITEM>SMBondCalculation.BondCriteriaState
+		<STATE NAME="Bond Scheme No sf-Shell" VERSION="24.1">
+		<PROPERTIES>
+		<PROPERTY NAME="ToleranceMaxFac">
+		<VALUE>2.</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="AtomExclusionList">
+		<VALUE>
+		<ITEM>13</ITEM>
+		<ITEM>14</ITEM>
+		<ITEM>15</ITEM>
+		</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="CalcBondType">
+		<VALUE>0</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="ConvertRepresentation">
+		<VALUE>false</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="SchemeName">
+		<VALUE>Anions</VALUE>
+		</PROPERTY>
+		</PROPERTIES>
+		</STATE>
+	</ITEM>
+	</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="SchemeList1">
+	<STATE NAME="Scheme List" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="ListStateID">
+	<VALUE>SMBondCalculation.HBondCriteriaState</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="SchemeList">
+	<VALUE>
+	<ITEM>SMBondCalculation.HBondCriteriaState
+		<STATE NAME="H-Bond Scheme ONS + Halogens" VERSION="24.1">
+		<PROPERTIES>
+		<PROPERTY NAME="DonorList">
+		<VALUE>
+		<ITEM>7</ITEM>
+		<ITEM>8</ITEM>
+		<ITEM>16</ITEM>
+		<ITEM>9</ITEM>
+		<ITEM>17</ITEM>
+		</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="AcceptorList">
+		<VALUE>
+		<ITEM>7</ITEM>
+		<ITEM>8</ITEM>
+		<ITEM>16</ITEM>
+		<ITEM>9</ITEM>
+		<ITEM>17</ITEM>
+		</VALUE>
+		</PROPERTY>
+		</PROPERTIES>
+		</STATE>
+	</ITEM>
+	<ITEM>SMBondCalculation.HBondCriteriaState
+		<STATE NAME="H-Bond Scheme ONS + Halogens" VERSION="24.1">
+		<PROPERTIES>
+		<PROPERTY NAME="DonorList">
+		<VALUE>
+		<ITEM>7</ITEM>
+		<ITEM>8</ITEM>
+		<ITEM>16</ITEM>
+		</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="AcceptorList">
+		<VALUE>
+		<ITEM>7</ITEM>
+		<ITEM>8</ITEM>
+		<ITEM>16</ITEM>
+		</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="SchemeName">
+		<VALUE>N, O, S</VALUE>
+		</PROPERTY>
+		</PROPERTIES>
+		</STATE>
+	</ITEM>
+	<ITEM>SMBondCalculation.HBondCriteriaState
+		<STATE NAME="H-Bond Scheme ONS + Halogens" VERSION="24.1">
+		<PROPERTIES>
+		<PROPERTY NAME="DonorList">
+		<VALUE>
+		<ITEM>7</ITEM>
+		<ITEM>8</ITEM>
+		<ITEM>16</ITEM>
+		<ITEM>9</ITEM>
+		<ITEM>17</ITEM>
+		<ITEM>6</ITEM>
+		</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="AcceptorList">
+		<VALUE>
+		<ITEM>7</ITEM>
+		<ITEM>8</ITEM>
+		<ITEM>16</ITEM>
+		<ITEM>9</ITEM>
+		<ITEM>17</ITEM>
+		</VALUE>
+		</PROPERTY>
+		<PROPERTY NAME="SchemeName">
+		<VALUE>N, O, S + Halogens + C as Donor</VALUE>
+		</PROPERTY>
+		</PROPERTIES>
+		</STATE>
+	</ITEM>
+	</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="SchemeList2">
+	<STATE NAME="Scheme List" VERSION="24.1">
+	<PROPERTIES>
+	<PROPERTY NAME="ListStateID">
+	<VALUE>SMBondCalculation.CloseContactCriteriaState</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="SchemeList">
+	<VALUE>
+	<ITEM>SMBondCalculation.CloseContactCriteriaState
+		<STATE NAME="Close Contact Criteria" VERSION="24.1">
+		<PROPERTIES>
+		<PROPERTY NAME="AtomExclusionList">
+		<VALUE></VALUE>
+		</PROPERTY>
+		</PROPERTIES>
+		</STATE>
+	</ITEM>
+	</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+<LOGICITEM NAME="ScriptedHBondCalculation">
+</LOGICITEM>
+</LOGICS>
+</EXTENSION>

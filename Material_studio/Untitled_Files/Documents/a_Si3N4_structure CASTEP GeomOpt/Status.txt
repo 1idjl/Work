@@ -3,4 +3,9 @@
  plane wave basis set cut-off     :  550.0000   eV
  using functional                 :  Perdew Burke Ernzerhof
 
- Number of iterations             :  0
+ Number of iterations             :  10
+ Energy                           :  -7.59097300E+003  eV
+ Convergence                      :  7.790170E-002  eV/atom
+ Max. Displacement                :  1.103044E-001  A
+ Max. Force                       :  2.117618E+000  eV/A
+ Max. Stress                      :  1.000940E+001  GPa

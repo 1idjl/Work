@@ -3,8 +3,137 @@
   <Version>24.1</Version>
   <Reference>{858F36CF-6ABE-4667-BC82-3F9FC5588DB6}</Reference>
   <DocumentManager>
+    <Document>
+      <ID>{C0C733DA-BF1F-4CC8-8AEF-4F6EBB5BA06A}</ID>
+      <Paths>1</Paths>
+      <URL>.\a_Si3N4_structure CASTEP GeomOpt\a_Si3N4_structure Convergence.xcd</URL>
+    </Document>
+    <Document>
+      <ID>{E06B5361-C11E-4C15-A76C-B234F35D83D2}</ID>
+      <Paths>1</Paths>
+      <URL>.\a_Si3N4_structure CASTEP GeomOpt\a_Si3N4_structure Energies.xcd</URL>
+    </Document>
+    <Document>
+      <ID>{DFB136CE-957F-496E-8B54-6783395076A9}</ID>
+      <Paths>1</Paths>
+      <URL>.\a_Si3N4_structure CASTEP GeomOpt\a_Si3N4_structure.castep</URL>
+    </Document>
+    <Document>
+      <ID>{06E59CAA-0684-4507-A1D0-BAF0390F4EF7}</ID>
+      <Paths>1</Paths>
+      <URL>.\a_Si3N4_structure CASTEP GeomOpt\a_Si3N4_structure.param</URL>
+    </Document>
+    <Document>
+      <ID>{0F3EF38B-1CAC-49A8-82F1-E1D65BE47C54}</ID>
+      <Paths>1</Paths>
+      <URL>.\a_Si3N4_structure CASTEP GeomOpt\a_Si3N4_structure.xsd</URL>
+    </Document>
+    <Document>
+      <ID>{B0DF9E25-14C6-43A3-B3F8-8F38755C1E9E}</ID>
+      <Paths>1</Paths>
+      <URL>.\a_Si3N4_structure CASTEP GeomOpt\a_Si3N4_structure.xtd</URL>
+    </Document>
+    <Document>
+      <ID>{5AC5A73B-9631-466C-A98D-83F048AEC765}</ID>
+      <Paths>1</Paths>
+      <URL>.\a_Si3N4_structure CASTEP GeomOpt\SMCastep_Extension_a_Si3N4_structure.xms</URL>
+    </Document>
+    <Document>
+      <ID>{FCD604F7-3196-46F9-8B2A-38DADD6E15BF}</ID>
+      <Paths>1</Paths>
+      <URL>.\a_Si3N4_structure CASTEP GeomOpt\Status.txt</URL>
+    </Document>
+    <Document>
+      <ID>{AE80EC3E-8D88-4DAD-9733-5FC3ED811EA7}</ID>
+      <Paths>1</Paths>
+      <URL>.\CaO_fragment.xsd</URL>
+    </Document>
+    <Document>
+      <ID>{FCD9EEEF-B870-4AA7-9C47-F89FE9B7C712}</ID>
+      <Paths>1</Paths>
+      <URL>.\P2O5_fragment.xsd</URL>
+    </Document>
+    <Document>
+      <ID>{C1292C6F-DC5B-4571-9486-85A6185882BD}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\glass_60SiO2_36CaO_4P2O5_initial Forcite GeomOpt\glass_60SiO2_36CaO_4P2O5_initial.txt</URL>
+    </Document>
+    <Document>
+      <ID>{414F430C-CFEC-4377-9156-321B447377A0}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\glass_60SiO2_36CaO_4P2O5_initial Forcite GeomOpt\glass_60SiO2_36CaO_4P2O5_initial.xtd</URL>
+    </Document>
+    <Document>
+      <ID>{03ED5B2C-1D2D-4F17-8B06-58047CEAB463}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\glass_60SiO2_36CaO_4P2O5_initial Forcite GeomOpt\SMForcite_Extension_glass_60SiO2_36CaO_4P2O5_initial.xms</URL>
+    </Document>
+    <Document>
+      <ID>{FA108660-A842-4CC3-A2E8-DF993E7D117B}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\glass_60SiO2_36CaO_4P2O5_initial.xtd</URL>
+    </Document>
+    <Document>
+      <ID>{17248D06-B683-4BF3-8B51-7AD7A8B70F7C}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\Input\CaO_fragment.xsd</URL>
+    </Document>
+    <Document>
+      <ID>{0C09007B-D2D4-4797-8D65-5173BA04506C}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\Input\P2O5_fragment.xsd</URL>
+    </Document>
+    <Document>
+      <ID>{9499617E-A6EC-496D-A780-2C9D8FA173DC}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\Input\SiO2_fragment.xsd</URL>
+    </Document>
+    <Document>
+      <ID>{E9403B2D-8178-4D6E-B2F1-98BEFFBF1D21}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\SiO2_fragment Energy.xcd</URL>
+    </Document>
+    <Document>
+      <ID>{AE5B86F3-2DB9-431D-97D8-130AFAC41713}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\SiO2_fragment.txt</URL>
+    </Document>
+    <Document>
+      <ID>{95F24DB8-7BDF-447B-81CA-81CA94A8A9EE}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\SMAmorphousBuilder_Extension_SiO2_fragment.xms</URL>
+    </Document>
+    <Document>
+      <ID>{24A310F1-7D66-4A74-ABA8-7D3E9F5D4355}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment AC Construct\Status.txt</URL>
+    </Document>
+    <Document>
+      <ID>{6A8290FA-45C5-42F6-9890-2E9A2ECE37DA}</ID>
+      <Paths>1</Paths>
+      <URL>.\SiO2_fragment.xsd</URL>
+    </Document>
+    <Document>
+      <ID>{2BEF7297-DC1B-46A6-9B04-7AF6B5A4C31D}</ID>
+      <Paths>1</Paths>
+      <URL>.\3D Atomistic.xsd</URL>
+    </Document>
   </DocumentManager>
   <ViewRegistry>
+    <Frame>
+      <Active>true</Active>
+      <Left>0</Left>
+      <Top>0</Top>
+      <Width>769</Width>
+      <Height>217</Height>
+      <Maximized>true</Maximized>
+      <Minimized>false</Minimized>
+      <View>
+        <Active>true</Active>
+        <DocumentID>{2BEF7297-DC1B-46A6-9B04-7AF6B5A4C31D}</DocumentID>
+        <Type>SVViewer3D.Viewer3DControl</Type>
+      </View>
+    </Frame>
   </ViewRegistry>
   <DocumentEventManager>
   </DocumentEventManager>

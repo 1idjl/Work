@@ -1,0 +1,405 @@
+# === Monte Carlo Glass Simulation Context (Resync Prompt) ===
+
+Project:
+NPT Monte Carlo Simulation of SiO2–CaO–P2O5 Glass
+
+Input Structure:
+Ternary.xyz
+
+Objective:
+Perform 5000 Monte Carlo steps using Buckingham + Wolf electrostatics
+and generate:
+- trajectory.xyz
+- RDF plots
+- Energy vs MC step
+- diagnostic summary
+
+Simulation Details:
+- Ensemble: NPT
+- MC moves:
+  - atom displacement
+  - isotropic volume move
+- Temperature schedule:
+  4000K → 3000K → 2000K → 1000K → 300K
+  (1000 steps each)
+
+Force Field:
+- Buckingham interactions:
+  Si–O
+  Ca–O
+  P–O
+  O–O
+- Parameters loaded from external force-field table
+- Coulomb handled using Wolf summation
+- alpha = 0.2
+- cutoff = 10 Å
+
+System:
+- Density = 2.2 g/cm³
+- Periodic boundary conditions
+- Neighbor list update every 25 steps
+- trajectory saved every 10 steps
+
+Optimization:
+- numba.jit
+- local energy evaluation
+- vectorized numpy operations
+- optimized neighbor list
+
+Outputs:
+1. trajectory.xyz
+2. RDF:
+   - Si-O
+   - Ca-O
+   - P-O
+   - O-O
+3. Energy vs step
+4. Simulation diagnostics
+5. Parameter recommendation summary
+
+Implementation Style:
+- Modular Jupyter notebook cells
+- Debug-friendly
+- Each section independently executable
+
+AI Task:
+Continue generating the next Jupyter notebook cells
+while preserving this architecture and optimization strategy.
+
+# ============================================================
+You are an expert in computational materials science, molecular simulations, and Monte Carlo methods.
+
+Your task is to help implement a high‑performance Monte Carlo NPT simulation for a ternary glass system using Python.
+
+The user is a materials engineer and data scientist working on atomistic simulations.
+
+Write clear, modular, scientifically correct code suitable for a Jupyter notebook.
+
+The implementation must prioritize numerical stability, performance, and clarity.
+
+PROJECT: Monte Carlo Simulation of SiO₂–CaO–P₂O₅ Glass
+
+SYSTEM
+
+Glass composition (molar %):
+
+SiO₂ = 60%
+
+CaO = 36%
+
+P₂O₅ = 4%
+
+Target density:
+
+2.2 g/cm³
+
+Simulation box:
+
+30 Å × 30 Å × 30 Å
+
+Approximate atoms:
+
+~2000 atoms
+
+INPUT STRUCTURE FILE
+
+The structure is provided in a file:
+
+Ternary.txt
+
+File format:
+
+Line 1
+
+Number of atoms
+
+Line 2
+
+Metadata line (example: “Atoms. Timestep: 0”)
+
+Line 3+
+
+Atom list:
+
+Element x y z
+
+Example:
+
+Si 5.238 10.221 7.331
+
+O 6.112 11.003 8.114
+
+The file contains one snapshot of the atomic structure.
+
+Your code must implement a robust parser for this file.
+
+FORCE FIELD
+
+Use a Buckingham + Coulomb potential model.
+
+Buckingham potential:
+
+V® = A exp(-r / rho) − C / r⁶
+
+Pairs used:
+
+Si–O
+
+Ca–O
+
+P–O
+
+O–O
+
+Parameters will be provided externally.
+
+COULOMB INTERACTION
+
+Use Wolf summation instead of Ewald.
+
+Formula:
+
+V_coul® = (q_i q_j / r) * erfc(alpha * r)
+
+Parameters:
+
+cutoff = 10 Å
+
+alpha = 0.2
+
+MONTE CARLO ENSEMBLE
+
+Use NPT Monte Carlo with:
+
+atomic displacement moves
+isotropic volume moves
+Acceptance criterion:
+
+Metropolis algorithm.
+
+Local energy updates should be used:
+
+only compute energy changes for affected atoms.
+
+NEIGHBOR LIST
+
+To improve performance:
+
+Use a Verlet neighbor list.
+
+Parameters:
+
+cutoff = 10 Å
+
+skin = 1 Å
+
+update frequency = every 25 MC steps
+
+Neighbor calculations should be optimized using Numba.
+
+ANNEALING SCHEDULE
+
+Simulate melt–quench–relax:
+
+Temperature stages:
+
+4000 K
+
+3000 K
+
+2000 K
+
+1000 K
+
+300 K
+
+Each stage:
+
+1000 Monte Carlo steps
+
+Total:
+
+5000 steps
+
+OUTPUTS
+
+The simulation must produce:
+
+trajectory.xyz
+Save coordinates every 10 steps
+
+Energy vs Monte Carlo step
+
+Radial distribution functions (RDF)
+
+Pairs:
+
+Si–O
+
+Ca–O
+
+P–O
+
+O–O
+
+Coordination numbers
+
+Volume vs step
+
+Acceptance ratio statistics
+
+Energy histogram
+
+FINAL REPORT
+
+Automatically generate an HTML report:
+
+ternary_report.html
+
+The report must include:
+
+Simulation parameters
+
+Energy plot
+
+RDF plots
+
+Volume evolution
+
+Acceptance statistics
+
+Coordination number analysis
+
+Basic diagnostics
+
+All plots should be embedded so the report is portable.
+
+PYTHON LIBRARIES TO USE
+
+numpy
+
+scipy
+
+pandas
+
+matplotlib
+
+seaborn
+
+numba
+
+tqdm
+
+MDAnalysis
+
+mdtraj
+
+ase
+
+plotly
+
+PERFORMANCE REQUIREMENTS
+
+Use Numba JIT acceleration for:
+
+energy calculations
+
+neighbor list loops
+
+RDF calculations
+
+Monte Carlo kernels
+
+Avoid O(N²) scaling where possible.
+
+CODING STYLE
+
+The implementation must be written as a Jupyter Notebook with modular cells.
+
+Suggested structure:
+
+Cell 1
+
+Imports and global configuration
+
+Cell 2
+
+Parser for Ternary.txt
+
+Cell 3
+
+Force‑field parameter loading
+
+Cell 4
+
+Charge assignment
+
+Cell 5
+
+Neighbor list implementation
+
+Cell 6
+
+Buckingham + Wolf energy calculation
+
+Cell 7
+
+Total system energy
+
+Cell 8
+
+Atomic displacement MC move
+
+Cell 9
+
+Volume move for NPT
+
+Cell 10
+
+Annealing loop
+
+Cell 11
+
+Trajectory writer
+
+Cell 12
+
+RDF calculation
+
+Cell 13
+
+Diagnostics
+
+Cell 14
+
+Plot generation
+
+Cell 15
+
+HTML report generation
+
+TASK
+
+Start by generating the code for:
+
+Cell 1–4
+
+These must include:
+
+• imports
+
+• global simulation parameters
+
+• parser for Ternary.txt
+
+• atom type arrays
+
+• coordinate arrays
+
+• charge assignment
+
+• validation of atom counts
+
+Ensure the code is clear, optimized, and ready to run in a Jupyter notebook.
+
+:::
