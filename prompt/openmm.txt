@@ -1,0 +1,409 @@
+=== Monte Carlo Glass Simulation Context (OpenMM + Numba Hybrid GPU) ===
+PROJECT
+
+Hybrid GPU Monte Carlo Simulation of SiO₂–CaO–P₂O₅ Glass
+
+GOAL
+
+Implement a high‑performance NPT Monte Carlo simulation using:
+
+• OpenMM GPU engine for energy calculations
+
+• Numba‑accelerated Monte Carlo kernels
+
+• Python orchestration for simulation control
+
+This hybrid architecture enables GPU‑accelerated energy evaluation
+
+while preserving flexible Monte Carlo move logic.
+
+INPUT STRUCTURE
+
+File: Ternary.txt
+
+Format:
+
+Line 1
+
+Number of atoms
+
+Line 2
+
+Metadata
+
+Line 3+
+
+Element x y z
+
+Example:
+
+Si 5.238 10.221 7.331
+
+O 6.112 11.003 8.114
+
+The file contains a single atomic snapshot.
+
+The implementation must include a robust parser that converts the
+
+structure into arrays suitable for both:
+
+• OpenMM System construction
+
+• Numba Monte Carlo kernels
+
+SYSTEM
+
+Glass composition (molar %)
+
+SiO₂ = 60%
+
+CaO = 36%
+
+P₂O₅ = 4%
+
+Target density
+
+2.2 g/cm³
+
+Simulation box
+
+30 Å × 30 Å × 30 Å
+
+Atoms
+
+~2000 atoms
+
+Periodic boundary conditions enabled.
+
+FORCE FIELD
+
+Use Buckingham + Coulomb (Wolf summation).
+
+Buckingham potential
+
+V® = A exp(-r / ρ) − C / r⁶
+
+Pairs
+
+Si–O
+
+Ca–O
+
+P–O
+
+O–O
+
+Parameters loaded from external force‑field table.
+
+COULOMB INTERACTION
+
+Wolf electrostatics:
+
+V_coul® = (q_i q_j / r) * erfc(alpha r)
+
+Parameters:
+
+cutoff = 10 Å
+
+alpha = 0.2
+
+Implementation:
+
+Wolf Coulomb must be implemented inside an
+
+OpenMM CustomNonbondedForce so it executes on the GPU.
+
+MONTE CARLO ENSEMBLE
+
+NPT Monte Carlo simulation.
+
+Moves:
+
+Atomic displacement move
+Isotropic volume move
+Acceptance criterion:
+
+Metropolis algorithm.
+
+Energy differences are evaluated by:
+
+• updating OpenMM positions
+
+• requesting potential energy from GPU
+
+This allows GPU‑accelerated energy evaluation.
+
+HYBRID GPU ARCHITECTURE
+
+Energy evaluation → OpenMM GPU
+
+Monte Carlo move logic → Numba kernels
+
+Simulation controller → Python
+
+Advantages:
+
+• GPU energy evaluation
+
+• flexible Monte Carlo moves
+
+• minimal CPU overhead
+
+Workflow per MC step:
+
+Propose move (Numba)
+Update coordinates
+Push coordinates to OpenMM context
+Request potential energy (GPU)
+Apply Metropolis criterion
+NEIGHBOR HANDLING
+
+Neighbor lists are handled by OpenMM internal cutoff system.
+
+Cutoff
+
+10 Å
+
+Periodic boundary conditions enabled.
+
+This avoids explicit Python neighbor loops.
+
+ANNEALING SCHEDULE
+
+Melt → quench → relax
+
+Temperatures
+
+4000 K
+
+3000 K
+
+2000 K
+
+1000 K
+
+300 K
+
+Each stage
+
+1000 MC steps
+
+Total
+
+5000 MC steps
+
+MC MOVE PARAMETERS
+
+Maximum atomic displacement
+
+0.2 Å
+
+Maximum volume change
+
+2 %
+
+Volume moves performed every
+
+20 MC steps
+
+OUTPUTS
+
+Simulation must produce:
+
+trajectory.xyz
+
+(saved every 10 steps)
+
+Energy vs MC step
+
+Volume vs MC step
+
+Radial distribution functions
+
+Pairs:
+
+Si–O
+
+Ca–O
+
+P–O
+
+O–O
+
+Coordination numbers
+
+Energy histogram
+
+Acceptance statistics
+
+RDF CALCULATION
+
+RDF should be computed using:
+
+• MDAnalysis or mdtraj
+
+• Numba acceleration for histogram loops
+
+FINAL REPORT
+
+Automatically generate
+
+ternary_report.html
+
+Include:
+
+Simulation parameters
+
+Energy evolution
+
+Volume evolution
+
+RDF plots
+
+Coordination numbers
+
+Acceptance ratios
+
+Basic diagnostics
+
+All plots must be embedded for portability.
+
+PYTHON LIBRARIES
+
+numpy
+
+scipy
+
+pandas
+
+matplotlib
+
+seaborn
+
+numba
+
+tqdm
+
+MDAnalysis
+
+mdtraj
+
+ase
+
+plotly
+
+GPU ENGINE
+
+openmm
+
+PERFORMANCE STRATEGY
+
+Use GPU for:
+
+• pair interactions
+
+• Coulomb calculations
+
+• cutoff neighbor handling
+
+Use Numba for:
+
+• Monte Carlo move proposal
+
+• coordinate perturbations
+
+• RDF histogram kernels
+
+Avoid CPU O(N²) loops.
+
+JUPYTER NOTEBOOK STRUCTURE
+
+Cell 1
+
+Imports + global configuration
+
+Cell 2
+
+Parser for Ternary.txt
+
+Cell 3
+
+Force‑field parameter loading
+
+Cell 4
+
+Charge assignment
+
+Cell 5
+
+OpenMM system construction
+
+Cell 6
+
+CustomNonbondedForce (Buckingham + Wolf)
+
+Cell 7
+
+OpenMM GPU context initialization
+
+Cell 8
+
+Energy evaluation wrapper
+
+Cell 9
+
+Atomic displacement MC move
+
+Cell 10
+
+Volume move for NPT
+
+Cell 11
+
+Annealing Monte Carlo loop
+
+Cell 12
+
+Trajectory writer
+
+Cell 13
+
+RDF calculation
+
+Cell 14
+
+Diagnostics and plots
+
+Cell 15
+
+HTML report generation
+
+TASK
+
+Start by generating the code for:
+
+Cell 1–4
+
+Requirements:
+
+• robust parser for Ternary.txt
+
+• atom type mapping
+
+• coordinate arrays
+
+• charge assignment
+
+• validation of atom counts
+
+The code must be:
+
+• modular
+
+• GPU‑ready for OpenMM
+
+• compatible with Numba Monte Carlo kernels
+
+• optimized for systems of ~2000 atoms
+
+:::
