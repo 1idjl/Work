@@ -1,0 +1,40 @@
+{
+  "code_version": "2.0",
+  "random_seed": 42,
+  "box_length": 31.98,
+  "n_atoms": 1960,
+  "composition": {
+    "Ca": 252,
+    "O": 1232,
+    "P": 56,
+    "Si": 420
+  },
+  "cutoff": 12.0,
+  "wolf_alpha": 0.2,
+  "skin": 2.0,
+  "n_steps": 21000,
+  "temperature_stages": [
+    4000,
+    3000,
+    2000,
+    1500,
+    1000,
+    500,
+    300
+  ],
+  "coulomb_prefactor": 14.3996454784255,
+  "ensemble": "NVT",
+  "neighbor_format": "CSR",
+  "timestamp": "2026-05-13 13:35:11",
+  "final_energy": -19742.988568983037,
+  "final_density": 2.2004490245057564,
+  "acceptance_rate": 47.75238095238095,
+  "wall_time_s": 913.8491055965424,
+  "consistency_failures": 5,
+  "final_displacements": {
+    "Si": 0.10629366000000004,
+    "P": 0.10629366000000004,
+    "O": 0.17715610000000007,
+    "Ca": 0.3
+  }
+}
